@@ -32,14 +32,15 @@ def checkText_wk(text_to_check):
     return letra.text, letra.val
 
 def checkText_dc(text_to_check):
-    link_w = 'https://www.dicio.com.br/' + text_to_check
+    link_w = 'https://www.dicionarioinformal.com.br/' + text_to_check
     r = requests.get(link_w)
     sel = Selector(r.text)
-    text_parts = sel.xpath('//*[@id="content"]/div[1]/div[1]/p/span[2]/text()').extract()
+    text_parts = sel.xpath('//*[@id="main-feed"]/div[3]/div[2]/p/text()').extract()
     #//span[@class="hgKElc"]//text()[last()]
     textt = ' '.join(text_parts)
-    text_t = re.sub('\s', ' ', textt, re.UNICODE)
-    letra = Textr(text_t )
+    print(textt)
+    text_t1 = re.sub('\s', ' ', textt, re.UNICODE)
+    letra1 = Textr(text_t1)
     
-    return letra.text, letra.val
+    return letra1.text, letra1.val
 #print(checkText("bola")[1])
