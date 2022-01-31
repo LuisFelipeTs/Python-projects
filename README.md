@@ -1,5 +1,5 @@
 <h1 align='center'>Python projects</h1>
-<h3 align='center'>A repository to store my python scripts</h3>
+<h3 align='center'>A repository to store my python scripts & projects</h3>
 <h4>Projects :</h4> 
 - General projects  <br />
 & PCVwGeneticAlgo (https://github.com/LuisFelipeTs/Python-projects/tree/main/PCVwGeneticAlg) <br />
