@@ -33,16 +33,14 @@ class WhatsLyrBot:
             time.sleep(2.5)
             if (old_mens != mens) & (mens != "."):
                 old_mens = mens
-                print(mens)
-                if " - " in mens :
-                    
+                if " - " in mens :   
                     song_n, singer = mens.split(" - ")
                     text_to_res = getMusicLyr(song_n, singer)
                     print(text_to_res)
                     if text_to_res == "NSF": self.wrMenss("Tal autor/musica não existe ou está escrito incorretamente")
                     else: self.wrMenss(text_to_res)
                         
-                else: self.wrMenss('por favor lembrar de separar o cantor da música com " - "')
+                else: self.wrMenss('Lembrar de separar o cantor da música com " - "')
 
 
     def getToZapp(self):
@@ -77,4 +75,4 @@ class WhatsLyrBot:
         return last_messages
 
 
-wt = WhatsLyrBot("BILIO", True)
+wt = WhatsLyrBot("", True)
