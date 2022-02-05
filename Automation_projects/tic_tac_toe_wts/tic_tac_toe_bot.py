@@ -7,7 +7,7 @@ class TTToeBot:
         self.p2_point = 0
         self.p1 = p1
         self.p2 = p2
-        self.board_st = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.board_st = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
         self.actual_player = self.chooseFplayer()
         self.round = 1
         self.game_status = "TIC-TAC-TOE"
@@ -18,26 +18,21 @@ class TTToeBot:
         print(rand_res)
         if rand_res == 0: self.actual_player = self.p1
         else: self.actual_player = self.p2
+        return self.actual_player
 
     def generateBoard(self):
         board_st = self.board_st
-        self.actual_board = """|-----------------------------|
-|          {12}           
+        self.actual_board = """
+|         {12}           
 |            {0}  |  {1}  |  {2}             
-|           -------------
 |            {3}  |  {4}  |  {5} 
-|           -------------
-|            {6}  |  {7}  |  {8}
-|
-|    Quadro de pontos : 
-|    {13} - {9}
-|    {14} - {10}
-|-----------------------------|
+|            {6}  |  {7}  |  {8} 
+|    {13} - {9} / {14} - {10}
 Player turn: {11}""".format(board_st[0], board_st[1], board_st[2], board_st[3], board_st[4], board_st[5], board_st[6], board_st[7], board_st[8], self.p1_point, self.p2_point, self.actual_player, self.game_status, self.p1, self.p2 )
         return self.actual_board
-
+  
     def newMove(self, pos): 
-        nw_pos = pos - 1
+        nw_pos = int(pos) - 1
         if self.round % 2 != 0:
             e_simb = self.simb[0]
             self.board_st[nw_pos] = e_simb
@@ -56,11 +51,16 @@ Player turn: {11}""".format(board_st[0], board_st[1], board_st[2], board_st[3], 
                 else: self.p2_point += 1
                 self.actual_player = "FIM DE JOGO"
                 return self.generateBoard()
+        self.changePlayer()
         if self.round == 10 : "Empate!"
         return self.generateBoard()
+
+    def changePlayer(self):
+        if self.actual_player == self.p1: self.actual_player = self.p2
+        else: self.actual_player = self.p1 
 
     def nwGame(self):
         self.actual_player = self.chooseFplayer()
         self.round = 1
         self.game_status = "TIC-TAC-TOE"
-        self.board_st = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        self.board_st = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]

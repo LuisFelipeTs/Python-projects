@@ -1,3 +1,4 @@
+from numpy import e
 from selenium import webdriver
 import time
 from tic_tac_toe_bot import TTToeBot
@@ -6,9 +7,11 @@ from selenium.webdriver.edge.service import Service
 from bs4 import BeautifulSoup
 
 class WhatsLyrBot:
+    global message2
     def __init__(self, actual_target, p2, status = False):
-        srv = Service(r'./msedgedriver.exe')
-        self.driver = webdriver.Edge(service = srv)
+
+        srv = Service(r'./m-sedgedriver.exe')
+        self.driver = webdriver.Edge( service_log_path = r'./m-sedgedriver.exe')
         self.actual_target = actual_target
         self.status = status
         self.whatsapp_link = "https://web.whatsapp.com/"
@@ -25,9 +28,10 @@ class WhatsLyrBot:
         self.wrMenss("2...")
         self.wrMenss("1...")
         self.game.nwGame
+        self.wrMenss(self.game.generateBoard())
 
     def startWork(self):
-        intro_text = "Olá " + "*" + self.actual_target + "*" + ", eu sou Tyc" + '\n' + "Seu BOT de jogo da velha, para começarmos iremos selecionar aleatoriamente o primeiro jogador" + '\n' + "Quando for seu turno digite um número disponível para escolher a posição(_Digite_ 'OK' _para parar o jogo_)"+ '\n' + "Digite algo para começar"
+        intro_text = "Olá " + "*" + self.actual_target + "*" + ", eu sou Tyc, seu BOT de jogo da velha, para começarmos iremos selecionar aleatoriamente o primeiro jogador" + '\n' + "Quando for seu turno digite um número disponível para escolher a posição (_Digite_ 'OK' _para parar o jogo_)" 
         self.getToZapp()
         self.wrMenss(intro_text)
         self.wrMenss(self.game.generateBoard())
@@ -39,7 +43,7 @@ class WhatsLyrBot:
                 self.wrMenss("Tchau :D")
                 break
             time.sleep(2.5)
-            if (old_mens != mens) & (mens != "."):
+            if (old_mens != mens) and (mens != "."):
                 old_mens = mens
                 print(mens)
                 if mens in '123456789' :
@@ -63,17 +67,16 @@ class WhatsLyrBot:
         txt_entry = self.driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
         time.sleep(0.5)
         txt_entry.click()
-        time.sleep(1)
-        #self.song_name + " - " + self.song_artist + "\n" + "\n"  
+        time.sleep(1)   
         txt_entry.send_keys(msg + Keys.ENTER)
-
+        
     def rdMenss(self):
         messages = list()
         if self.game.actual_player == self.game.p1: p_turn = "message-in"
         else: p_turn = "message-out"
-        #https://highontechs.com/chatbot/read-whatsapp-messages-using-python-selenium/ 
         soup = BeautifulSoup(self.driver.page_source, "html.parser")
-        for i in soup.find_all_next("div", class_= p_turn):
+        for i in soup.find_all("div", class_=p_turn):
+        #https://highontechs.com/chatbot/read-whatsapp-messages-using-python-selenium/ 
             message = i.find("span", class_="selectable-text")
             if message:
                 message2 = message.find("span")
@@ -83,6 +86,7 @@ class WhatsLyrBot:
         #-------------------------------------------------------------------------
         if len(messages) != 0: last_messages = messages[-1]
         else: last_messages = "."
+        print(last_messages)
         return last_messages
     
     def waitforNewGres(self):
@@ -100,7 +104,8 @@ class WhatsLyrBot:
                 if mens in 'SN' :
                     if mens == "S": self.callNewGm()
                     else: 
+                        self.wrMenss("Tchau :)")
                         self.onOffBot()
                 else:  self.wrMenss("Por favor insira *S* para sim e *N* para não")
 
-wt = WhatsLyrBot("Repositorio do Zap", "Luis F", True)
+wt = WhatsLyrBot("Bilio", "Luís", True)

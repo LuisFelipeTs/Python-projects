@@ -1,0 +1,1405 @@
+[1644072994.345][INFO]: Starting MSEdgeDriver 97.0.1072.76 (67eb904139a242a156f165600742bfb8f4166050) on port 50432
+[1644072994.345][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+[1644072996.902][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND InitSession {
+   "capabilities": {
+      "alwaysMatch": {
+         "browserName": "MicrosoftEdge",
+         "ms:edgeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         },
+         "pageLoadStrategy": "normal"
+      },
+      "firstMatch": [ {
+
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "MicrosoftEdge",
+      "ms:edgeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      },
+      "pageLoadStrategy": "normal"
+   }
+}
+[1644072996.916][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1644072996.918][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1644072996.929][INFO]: Launching msedge: "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-blink-features=ShadowDOMV0 --enable-logging --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\lfcct\AppData\Local\Temp\scoped_dir2316_502703747" data:,
+[1644072998.101][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1644072998.290][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "msedge",
+      "browserVersion": "97.0.1072.76",
+      "ms:edgeOptions": {
+         "debuggerAddress": "localhost:50438"
+      },
+      "msedge": {
+         "msedgedriverVersion": "97.0.1072.76 (67eb904139a242a156f165600742bfb8f4166050)",
+         "userDataDir": "C:\\Users\\lfcct\\AppData\\Local\\Temp\\scoped_dir2316_502703747"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "d2eef70b689f6c1c2df966e3df70dbbc"
+}
+[1644072998.308][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND Navigate {
+   "url": "https://web.whatsapp.com/"
+}
+[1644072998.309][INFO]: Waiting for pending navigations...
+[1644072998.312][INFO]: Done waiting for pending navigations. Status: ok
+[1644072998.716][INFO]: Waiting for pending navigations...
+[1644073001.453][INFO]: Done waiting for pending navigations. Status: ok
+[1644073001.453][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE Navigate
+[1644073016.470][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"side\"]/div[1]/div/label/div/div[2]"
+}
+[1644073016.470][INFO]: Waiting for pending navigations...
+[1644073016.471][INFO]: Done waiting for pending navigations. Status: ok
+[1644073016.487][INFO]: Waiting for pending navigations...
+[1644073016.489][INFO]: Done waiting for pending navigations. Status: ok
+[1644073016.489][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f5a29caf-4807-4443-8425-31da4351b669"
+}
+[1644073016.492][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "f5a29caf-4807-4443-8425-31da4351b669"
+}
+[1644073016.492][INFO]: Waiting for pending navigations...
+[1644073016.492][INFO]: Done waiting for pending navigations. Status: ok
+[1644073016.585][INFO]: Waiting for pending navigations...
+[1644073016.589][INFO]: Done waiting for pending navigations. Status: ok
+[1644073016.589][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073018.603][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "f5a29caf-4807-4443-8425-31da4351b669",
+   "text": "Bilio",
+   "value": [ "B", "i", "l", "i", "o", "" ]
+}
+[1644073018.603][INFO]: Waiting for pending navigations...
+[1644073018.604][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.092][INFO]: Waiting for pending navigations...
+[1644073019.105][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.105][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073019.111][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073019.111][INFO]: Waiting for pending navigations...
+[1644073019.157][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.195][INFO]: Waiting for pending navigations...
+[1644073019.201][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.201][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073019.717][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073019.717][INFO]: Waiting for pending navigations...
+[1644073019.724][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.840][INFO]: Waiting for pending navigations...
+[1644073019.845][INFO]: Done waiting for pending navigations. Status: ok
+[1644073019.845][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073020.862][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Olá *Bilio*, eu sou Tyc, seu BOT de jogo da velha, para começarmos iremos selecionar aleatoriamente o primeiro jogador\nQuando for seu turno digite um número disponível para escolher a posição (_Digite_ 'OK' _para parar o jogo_)",
+   "value": [ "O", "l", "á", " ", "*", "B", "i", "l", "i", "o", "*", ",", " ", "e", "u", " ", "s", "o", "u", " ", "T", "y", "c", ",", " ", "s", "e", "u", " ", "B", "O", "T", " ", "d", "e", " ", "j", "o", "g", "o", " ", "d", "a", " ", "v", "e", "l", "h", "a", ",", " ", "p", "a", "r", "a", " ", "c", "o", "m", "e", "ç", "a", "r", "m", "o", "s", " ", "i", "r", "e", "m", "o", "s", " ", "s", "e", "l", "e", "c", "i", "o", "n", "a", "r", " ", "a", "l", "e", "a", "t", "o", "r", "i", "a", "m", "e", "n", "t", "e", " ", "o", " ", "p", "r", "i", "m", "e", "i", "r", "o", " ", "j", "o", "g", "a", "d", "o", "r", "\n", "Q", "u", "a", "n", "d", "o", " ", "f", "o", "r", " ", "s", "e", "u", " ", "t", "u", "r", "n", "o", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", " ", "n", "ú", "m", "e", "r", "o", " ", "d", "i", "s", "p", "o", "n", "í", "v", "e", "l", " ", "p", "a", "r", "a", " ", "e", "s", "c", "o", "l", "h", "e", "r", " ", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "(", "_", "D", "i", "g", "i", "t", "e", "_", " ", "'", "O", "K", "'", " ", "_", "p", "a", "r", "a", " ", "p", "a", "r", "a", "r", " ", "o", " ", "j", "o", "g", "o", "_", ")", "" ]
+}
+[1644073020.862][INFO]: Waiting for pending navigations...
+[1644073020.864][INFO]: Done waiting for pending navigations. Status: ok
+[1644073021.882][INFO]: Waiting for pending navigations...
+[1644073021.940][INFO]: Done waiting for pending navigations. Status: ok
+[1644073021.940][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073021.980][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073021.980][INFO]: Waiting for pending navigations...
+[1644073021.988][INFO]: Done waiting for pending navigations. Status: ok
+[1644073022.022][INFO]: Waiting for pending navigations...
+[1644073022.044][INFO]: Done waiting for pending navigations. Status: ok
+[1644073022.044][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073022.549][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073022.549][INFO]: Waiting for pending navigations...
+[1644073022.550][INFO]: Done waiting for pending navigations. Status: ok
+[1644073022.600][INFO]: Waiting for pending navigations...
+[1644073022.603][INFO]: Done waiting for pending navigations. Status: ok
+[1644073022.603][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073023.611][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            1  |  2  |  3             \n|            4  |  5  |  6 \n|            7  |  8  |  9 \n|    Bilio - 0 / Luís - 0\nPlayer turn: Luís",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "1", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "4", " ", " ", "|", " ", " ", "5", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "8", " ", " ", "|", " ", " ", "9", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "L", "u", "í", "s", "" ]
+}
+[1644073023.611][INFO]: Waiting for pending navigations...
+[1644073023.613][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.543][INFO]: Waiting for pending navigations...
+[1644073024.584][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.584][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073024.587][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073024.587][INFO]: Waiting for pending navigations...
+[1644073024.588][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.602][INFO]: Waiting for pending navigations...
+[1644073024.602][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.603][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073024.954][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073024.955][INFO]: Waiting for pending navigations...
+[1644073024.956][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.991][INFO]: Waiting for pending navigations...
+[1644073024.992][INFO]: Done waiting for pending navigations. Status: ok
+[1644073024.992][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073027.851][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073027.851][INFO]: Waiting for pending navigations...
+[1644073027.852][INFO]: Done waiting for pending navigations. Status: ok
+[1644073027.876][INFO]: Waiting for pending navigations...
+[1644073027.877][INFO]: Done waiting for pending navigations. Status: ok
+[1644073027.877][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073030.690][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073030.690][INFO]: Waiting for pending navigations...
+[1644073030.691][INFO]: Done waiting for pending navigations. Status: ok
+[1644073030.713][INFO]: Waiting for pending navigations...
+[1644073030.715][INFO]: Done waiting for pending navigations. Status: ok
+[1644073030.715][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073033.508][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073033.508][INFO]: Waiting for pending navigations...
+[1644073033.509][INFO]: Done waiting for pending navigations. Status: ok
+[1644073033.530][INFO]: Waiting for pending navigations...
+[1644073033.531][INFO]: Done waiting for pending navigations. Status: ok
+[1644073033.532][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073036.325][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073036.326][INFO]: Waiting for pending navigations...
+[1644073036.327][INFO]: Done waiting for pending navigations. Status: ok
+[1644073036.343][INFO]: Waiting for pending navigations...
+[1644073036.344][INFO]: Done waiting for pending navigations. Status: ok
+[1644073036.344][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073036.852][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073036.852][INFO]: Waiting for pending navigations...
+[1644073036.856][INFO]: Done waiting for pending navigations. Status: ok
+[1644073036.899][INFO]: Waiting for pending navigations...
+[1644073036.902][INFO]: Done waiting for pending navigations. Status: ok
+[1644073036.902][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073037.911][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            1  |  2  |  3             \n|            4  |  5  |  6 \n|            7  |  8  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Bilio",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "1", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "4", " ", " ", "|", " ", " ", "5", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "8", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "B", "i", "l", "i", "o", "" ]
+}
+[1644073037.912][INFO]: Waiting for pending navigations...
+[1644073037.913][INFO]: Done waiting for pending navigations. Status: ok
+[1644073038.896][INFO]: Waiting for pending navigations...
+[1644073039.000][INFO]: Done waiting for pending navigations. Status: ok
+[1644073039.000][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073039.002][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073039.002][INFO]: Waiting for pending navigations...
+[1644073039.020][INFO]: Done waiting for pending navigations. Status: ok
+[1644073039.049][INFO]: Waiting for pending navigations...
+[1644073039.050][INFO]: Done waiting for pending navigations. Status: ok
+[1644073039.050][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073041.894][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073041.894][INFO]: Waiting for pending navigations...
+[1644073041.896][INFO]: Done waiting for pending navigations. Status: ok
+[1644073041.921][INFO]: Waiting for pending navigations...
+[1644073041.929][INFO]: Done waiting for pending navigations. Status: ok
+[1644073041.930][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073042.438][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073042.438][INFO]: Waiting for pending navigations...
+[1644073042.440][INFO]: Done waiting for pending navigations. Status: ok
+[1644073042.483][INFO]: Waiting for pending navigations...
+[1644073042.485][INFO]: Done waiting for pending navigations. Status: ok
+[1644073042.485][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073043.502][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073043.502][INFO]: Waiting for pending navigations...
+[1644073043.504][INFO]: Done waiting for pending navigations. Status: ok
+[1644073043.878][INFO]: Waiting for pending navigations...
+[1644073043.910][INFO]: Done waiting for pending navigations. Status: ok
+[1644073043.911][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073043.913][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073043.913][INFO]: Waiting for pending navigations...
+[1644073043.919][INFO]: Done waiting for pending navigations. Status: ok
+[1644073043.939][INFO]: Waiting for pending navigations...
+[1644073043.940][INFO]: Done waiting for pending navigations. Status: ok
+[1644073043.941][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073046.780][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073046.781][INFO]: Waiting for pending navigations...
+[1644073046.782][INFO]: Done waiting for pending navigations. Status: ok
+[1644073046.817][INFO]: Waiting for pending navigations...
+[1644073046.819][INFO]: Done waiting for pending navigations. Status: ok
+[1644073046.820][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073049.711][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073049.712][INFO]: Waiting for pending navigations...
+[1644073049.714][INFO]: Done waiting for pending navigations. Status: ok
+[1644073049.732][INFO]: Waiting for pending navigations...
+[1644073049.735][INFO]: Done waiting for pending navigations. Status: ok
+[1644073049.738][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073050.254][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073050.254][INFO]: Waiting for pending navigations...
+[1644073050.256][INFO]: Done waiting for pending navigations. Status: ok
+[1644073050.311][INFO]: Waiting for pending navigations...
+[1644073050.312][INFO]: Done waiting for pending navigations. Status: ok
+[1644073050.313][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073051.334][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            1  |  2  |  3             \n|            4  |  5  |  6 \n|            7  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Luís",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "1", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "4", " ", " ", "|", " ", " ", "5", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "L", "u", "í", "s", "" ]
+}
+[1644073051.335][INFO]: Waiting for pending navigations...
+[1644073051.336][INFO]: Done waiting for pending navigations. Status: ok
+[1644073052.315][INFO]: Waiting for pending navigations...
+[1644073052.359][INFO]: Done waiting for pending navigations. Status: ok
+[1644073052.359][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073052.366][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073052.366][INFO]: Waiting for pending navigations...
+[1644073052.388][INFO]: Done waiting for pending navigations. Status: ok
+[1644073052.420][INFO]: Waiting for pending navigations...
+[1644073052.426][INFO]: Done waiting for pending navigations. Status: ok
+[1644073052.426][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073055.310][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073055.311][INFO]: Waiting for pending navigations...
+[1644073055.312][INFO]: Done waiting for pending navigations. Status: ok
+[1644073055.332][INFO]: Waiting for pending navigations...
+[1644073055.334][INFO]: Done waiting for pending navigations. Status: ok
+[1644073055.334][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073055.858][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073055.858][INFO]: Waiting for pending navigations...
+[1644073055.859][INFO]: Done waiting for pending navigations. Status: ok
+[1644073055.921][INFO]: Waiting for pending navigations...
+[1644073055.923][INFO]: Done waiting for pending navigations. Status: ok
+[1644073055.923][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073056.929][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073056.929][INFO]: Waiting for pending navigations...
+[1644073056.931][INFO]: Done waiting for pending navigations. Status: ok
+[1644073057.286][INFO]: Waiting for pending navigations...
+[1644073057.304][INFO]: Done waiting for pending navigations. Status: ok
+[1644073057.304][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073057.306][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073057.306][INFO]: Waiting for pending navigations...
+[1644073057.307][INFO]: Done waiting for pending navigations. Status: ok
+[1644073057.322][INFO]: Waiting for pending navigations...
+[1644073057.323][INFO]: Done waiting for pending navigations. Status: ok
+[1644073057.324][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073060.188][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073060.188][INFO]: Waiting for pending navigations...
+[1644073060.190][INFO]: Done waiting for pending navigations. Status: ok
+[1644073060.208][INFO]: Waiting for pending navigations...
+[1644073060.210][INFO]: Done waiting for pending navigations. Status: ok
+[1644073060.211][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073060.729][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073060.729][INFO]: Waiting for pending navigations...
+[1644073060.731][INFO]: Done waiting for pending navigations. Status: ok
+[1644073060.791][INFO]: Waiting for pending navigations...
+[1644073060.793][INFO]: Done waiting for pending navigations. Status: ok
+[1644073060.793][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073061.804][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073061.804][INFO]: Waiting for pending navigations...
+[1644073061.806][INFO]: Done waiting for pending navigations. Status: ok
+[1644073062.218][INFO]: Waiting for pending navigations...
+[1644073062.246][INFO]: Done waiting for pending navigations. Status: ok
+[1644073062.246][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073062.249][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073062.249][INFO]: Waiting for pending navigations...
+[1644073062.255][INFO]: Done waiting for pending navigations. Status: ok
+[1644073062.276][INFO]: Waiting for pending navigations...
+[1644073062.277][INFO]: Done waiting for pending navigations. Status: ok
+[1644073062.277][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073065.132][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073065.132][INFO]: Waiting for pending navigations...
+[1644073065.134][INFO]: Done waiting for pending navigations. Status: ok
+[1644073065.165][INFO]: Waiting for pending navigations...
+[1644073065.167][INFO]: Done waiting for pending navigations. Status: ok
+[1644073065.167][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073068.099][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073068.099][INFO]: Waiting for pending navigations...
+[1644073068.101][INFO]: Done waiting for pending navigations. Status: ok
+[1644073068.118][INFO]: Waiting for pending navigations...
+[1644073068.119][INFO]: Done waiting for pending navigations. Status: ok
+[1644073068.119][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073068.627][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073068.627][INFO]: Waiting for pending navigations...
+[1644073068.629][INFO]: Done waiting for pending navigations. Status: ok
+[1644073068.684][INFO]: Waiting for pending navigations...
+[1644073068.686][INFO]: Done waiting for pending navigations. Status: ok
+[1644073068.686][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073069.704][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            1  |  2  |  3             \n|            X  |  5  |  6 \n|            7  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Bilio",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "1", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "5", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "B", "i", "l", "i", "o", "" ]
+}
+[1644073069.705][INFO]: Waiting for pending navigations...
+[1644073069.707][INFO]: Done waiting for pending navigations. Status: ok
+[1644073070.852][INFO]: Waiting for pending navigations...
+[1644073070.981][INFO]: Done waiting for pending navigations. Status: ok
+[1644073070.981][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073071.036][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073071.036][INFO]: Waiting for pending navigations...
+[1644073071.056][INFO]: Done waiting for pending navigations. Status: ok
+[1644073071.081][INFO]: Waiting for pending navigations...
+[1644073071.098][INFO]: Done waiting for pending navigations. Status: ok
+[1644073071.098][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073073.998][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073073.998][INFO]: Waiting for pending navigations...
+[1644073074.000][INFO]: Done waiting for pending navigations. Status: ok
+[1644073074.015][INFO]: Waiting for pending navigations...
+[1644073074.016][INFO]: Done waiting for pending navigations. Status: ok
+[1644073074.016][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073074.527][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073074.528][INFO]: Waiting for pending navigations...
+[1644073074.529][INFO]: Done waiting for pending navigations. Status: ok
+[1644073074.573][INFO]: Waiting for pending navigations...
+[1644073074.574][INFO]: Done waiting for pending navigations. Status: ok
+[1644073074.574][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073075.586][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Essa posição já foi selecionada por favor escolher outra",
+   "value": [ "E", "s", "s", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "j", "á", " ", "f", "o", "i", " ", "s", "e", "l", "e", "c", "i", "o", "n", "a", "d", "a", " ", "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "e", "s", "c", "o", "l", "h", "e", "r", " ", "o", "u", "t", "r", "a", "" ]
+}
+[1644073075.586][INFO]: Waiting for pending navigations...
+[1644073075.588][INFO]: Done waiting for pending navigations. Status: ok
+[1644073076.042][INFO]: Waiting for pending navigations...
+[1644073076.064][INFO]: Done waiting for pending navigations. Status: ok
+[1644073076.064][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073076.067][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073076.067][INFO]: Waiting for pending navigations...
+[1644073076.068][INFO]: Done waiting for pending navigations. Status: ok
+[1644073076.081][INFO]: Waiting for pending navigations...
+[1644073076.082][INFO]: Done waiting for pending navigations. Status: ok
+[1644073076.082][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073078.950][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073078.950][INFO]: Waiting for pending navigations...
+[1644073079.005][INFO]: Done waiting for pending navigations. Status: ok
+[1644073079.031][INFO]: Waiting for pending navigations...
+[1644073079.034][INFO]: Done waiting for pending navigations. Status: ok
+[1644073079.034][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073081.900][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073081.901][INFO]: Waiting for pending navigations...
+[1644073081.902][INFO]: Done waiting for pending navigations. Status: ok
+[1644073081.932][INFO]: Waiting for pending navigations...
+[1644073081.934][INFO]: Done waiting for pending navigations. Status: ok
+[1644073081.934][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073084.818][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073084.818][INFO]: Waiting for pending navigations...
+[1644073084.819][INFO]: Done waiting for pending navigations. Status: ok
+[1644073084.836][INFO]: Waiting for pending navigations...
+[1644073084.838][INFO]: Done waiting for pending navigations. Status: ok
+[1644073084.838][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073085.345][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073085.345][INFO]: Waiting for pending navigations...
+[1644073085.347][INFO]: Done waiting for pending navigations. Status: ok
+[1644073085.408][INFO]: Waiting for pending navigations...
+[1644073085.409][INFO]: Done waiting for pending navigations. Status: ok
+[1644073085.409][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073086.426][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            1  |  2  |  3             \n|            X  |  O  |  6 \n|            7  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Luís",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "1", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "L", "u", "í", "s", "" ]
+}
+[1644073086.426][INFO]: Waiting for pending navigations...
+[1644073086.428][INFO]: Done waiting for pending navigations. Status: ok
+[1644073087.526][INFO]: Waiting for pending navigations...
+[1644073087.599][INFO]: Done waiting for pending navigations. Status: ok
+[1644073087.599][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073087.631][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073087.631][INFO]: Waiting for pending navigations...
+[1644073087.641][INFO]: Done waiting for pending navigations. Status: ok
+[1644073087.686][INFO]: Waiting for pending navigations...
+[1644073087.710][INFO]: Done waiting for pending navigations. Status: ok
+[1644073087.710][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073090.589][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073090.589][INFO]: Waiting for pending navigations...
+[1644073090.591][INFO]: Done waiting for pending navigations. Status: ok
+[1644073090.609][INFO]: Waiting for pending navigations...
+[1644073090.610][INFO]: Done waiting for pending navigations. Status: ok
+[1644073090.611][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073091.119][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073091.119][INFO]: Waiting for pending navigations...
+[1644073091.120][INFO]: Done waiting for pending navigations. Status: ok
+[1644073091.165][INFO]: Waiting for pending navigations...
+[1644073091.166][INFO]: Done waiting for pending navigations. Status: ok
+[1644073091.166][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073092.179][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073092.179][INFO]: Waiting for pending navigations...
+[1644073092.180][INFO]: Done waiting for pending navigations. Status: ok
+[1644073092.521][INFO]: Waiting for pending navigations...
+[1644073092.545][INFO]: Done waiting for pending navigations. Status: ok
+[1644073092.545][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073092.547][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073092.547][INFO]: Waiting for pending navigations...
+[1644073092.560][INFO]: Done waiting for pending navigations. Status: ok
+[1644073092.576][INFO]: Waiting for pending navigations...
+[1644073092.577][INFO]: Done waiting for pending navigations. Status: ok
+[1644073092.577][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073095.451][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073095.451][INFO]: Waiting for pending navigations...
+[1644073095.452][INFO]: Done waiting for pending navigations. Status: ok
+[1644073095.467][INFO]: Waiting for pending navigations...
+[1644073095.469][INFO]: Done waiting for pending navigations. Status: ok
+[1644073095.469][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073095.982][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073095.982][INFO]: Waiting for pending navigations...
+[1644073095.983][INFO]: Done waiting for pending navigations. Status: ok
+[1644073096.024][INFO]: Waiting for pending navigations...
+[1644073096.025][INFO]: Done waiting for pending navigations. Status: ok
+[1644073096.025][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073097.041][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073097.041][INFO]: Waiting for pending navigations...
+[1644073097.043][INFO]: Done waiting for pending navigations. Status: ok
+[1644073097.441][INFO]: Waiting for pending navigations...
+[1644073097.483][INFO]: Done waiting for pending navigations. Status: ok
+[1644073097.483][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073097.489][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073097.489][INFO]: Waiting for pending navigations...
+[1644073097.492][INFO]: Done waiting for pending navigations. Status: ok
+[1644073097.520][INFO]: Waiting for pending navigations...
+[1644073097.521][INFO]: Done waiting for pending navigations. Status: ok
+[1644073097.521][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073100.403][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073100.403][INFO]: Waiting for pending navigations...
+[1644073100.405][INFO]: Done waiting for pending navigations. Status: ok
+[1644073100.435][INFO]: Waiting for pending navigations...
+[1644073100.437][INFO]: Done waiting for pending navigations. Status: ok
+[1644073100.438][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073103.374][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073103.375][INFO]: Waiting for pending navigations...
+[1644073103.376][INFO]: Done waiting for pending navigations. Status: ok
+[1644073103.394][INFO]: Waiting for pending navigations...
+[1644073103.395][INFO]: Done waiting for pending navigations. Status: ok
+[1644073103.395][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073103.900][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073103.900][INFO]: Waiting for pending navigations...
+[1644073103.901][INFO]: Done waiting for pending navigations. Status: ok
+[1644073103.924][INFO]: Waiting for pending navigations...
+[1644073103.924][INFO]: Done waiting for pending navigations. Status: ok
+[1644073103.925][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073104.945][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            X  |  2  |  3             \n|            X  |  O  |  6 \n|            7  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Bilio",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "7", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "B", "i", "l", "i", "o", "" ]
+}
+[1644073104.946][INFO]: Waiting for pending navigations...
+[1644073104.947][INFO]: Done waiting for pending navigations. Status: ok
+[1644073105.943][INFO]: Waiting for pending navigations...
+[1644073105.992][INFO]: Done waiting for pending navigations. Status: ok
+[1644073105.992][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073105.995][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073105.995][INFO]: Waiting for pending navigations...
+[1644073106.022][INFO]: Done waiting for pending navigations. Status: ok
+[1644073106.042][INFO]: Waiting for pending navigations...
+[1644073106.050][INFO]: Done waiting for pending navigations. Status: ok
+[1644073106.050][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073108.853][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073108.853][INFO]: Waiting for pending navigations...
+[1644073108.854][INFO]: Done waiting for pending navigations. Status: ok
+[1644073108.867][INFO]: Waiting for pending navigations...
+[1644073108.868][INFO]: Done waiting for pending navigations. Status: ok
+[1644073108.869][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073109.380][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073109.380][INFO]: Waiting for pending navigations...
+[1644073109.381][INFO]: Done waiting for pending navigations. Status: ok
+[1644073109.423][INFO]: Waiting for pending navigations...
+[1644073109.424][INFO]: Done waiting for pending navigations. Status: ok
+[1644073109.424][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073110.437][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Essa posição já foi selecionada por favor escolher outra",
+   "value": [ "E", "s", "s", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "j", "á", " ", "f", "o", "i", " ", "s", "e", "l", "e", "c", "i", "o", "n", "a", "d", "a", " ", "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "e", "s", "c", "o", "l", "h", "e", "r", " ", "o", "u", "t", "r", "a", "" ]
+}
+[1644073110.437][INFO]: Waiting for pending navigations...
+[1644073110.438][INFO]: Done waiting for pending navigations. Status: ok
+[1644073110.855][INFO]: Waiting for pending navigations...
+[1644073110.905][INFO]: Done waiting for pending navigations. Status: ok
+[1644073110.906][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073110.910][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073110.911][INFO]: Waiting for pending navigations...
+[1644073110.912][INFO]: Done waiting for pending navigations. Status: ok
+[1644073110.937][INFO]: Waiting for pending navigations...
+[1644073110.941][INFO]: Done waiting for pending navigations. Status: ok
+[1644073110.941][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073113.775][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073113.775][INFO]: Waiting for pending navigations...
+[1644073113.777][INFO]: Done waiting for pending navigations. Status: ok
+[1644073113.799][INFO]: Waiting for pending navigations...
+[1644073113.801][INFO]: Done waiting for pending navigations. Status: ok
+[1644073113.801][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073116.628][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073116.628][INFO]: Waiting for pending navigations...
+[1644073116.629][INFO]: Done waiting for pending navigations. Status: ok
+[1644073116.640][INFO]: Waiting for pending navigations...
+[1644073116.642][INFO]: Done waiting for pending navigations. Status: ok
+[1644073116.642][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073117.156][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073117.156][INFO]: Waiting for pending navigations...
+[1644073117.157][INFO]: Done waiting for pending navigations. Status: ok
+[1644073117.197][INFO]: Waiting for pending navigations...
+[1644073117.205][INFO]: Done waiting for pending navigations. Status: ok
+[1644073117.205][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073118.222][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            X  |  2  |  3             \n|            X  |  O  |  6 \n|            O  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Luís",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "6", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "L", "u", "í", "s", "" ]
+}
+[1644073118.222][INFO]: Waiting for pending navigations...
+[1644073118.223][INFO]: Done waiting for pending navigations. Status: ok
+[1644073119.241][INFO]: Waiting for pending navigations...
+[1644073119.337][INFO]: Done waiting for pending navigations. Status: ok
+[1644073119.337][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073119.350][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073119.350][INFO]: Waiting for pending navigations...
+[1644073119.375][INFO]: Done waiting for pending navigations. Status: ok
+[1644073119.405][INFO]: Waiting for pending navigations...
+[1644073119.429][INFO]: Done waiting for pending navigations. Status: ok
+[1644073119.430][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073122.273][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073122.274][INFO]: Waiting for pending navigations...
+[1644073122.275][INFO]: Done waiting for pending navigations. Status: ok
+[1644073122.293][INFO]: Waiting for pending navigations...
+[1644073122.296][INFO]: Done waiting for pending navigations. Status: ok
+[1644073122.296][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073122.816][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073122.816][INFO]: Waiting for pending navigations...
+[1644073122.818][INFO]: Done waiting for pending navigations. Status: ok
+[1644073122.873][INFO]: Waiting for pending navigations...
+[1644073122.874][INFO]: Done waiting for pending navigations. Status: ok
+[1644073122.875][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073123.896][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073123.896][INFO]: Waiting for pending navigations...
+[1644073123.898][INFO]: Done waiting for pending navigations. Status: ok
+[1644073124.088][INFO]: Waiting for pending navigations...
+[1644073124.111][INFO]: Done waiting for pending navigations. Status: ok
+[1644073124.111][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073124.113][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073124.113][INFO]: Waiting for pending navigations...
+[1644073124.159][INFO]: Done waiting for pending navigations. Status: ok
+[1644073124.176][INFO]: Waiting for pending navigations...
+[1644073124.177][INFO]: Done waiting for pending navigations. Status: ok
+[1644073124.177][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073127.109][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073127.109][INFO]: Waiting for pending navigations...
+[1644073127.111][INFO]: Done waiting for pending navigations. Status: ok
+[1644073127.122][INFO]: Waiting for pending navigations...
+[1644073127.124][INFO]: Done waiting for pending navigations. Status: ok
+[1644073127.124][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073127.637][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073127.637][INFO]: Waiting for pending navigations...
+[1644073127.638][INFO]: Done waiting for pending navigations. Status: ok
+[1644073127.679][INFO]: Waiting for pending navigations...
+[1644073127.680][INFO]: Done waiting for pending navigations. Status: ok
+[1644073127.680][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073128.692][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073128.692][INFO]: Waiting for pending navigations...
+[1644073128.693][INFO]: Done waiting for pending navigations. Status: ok
+[1644073129.010][INFO]: Waiting for pending navigations...
+[1644073129.046][INFO]: Done waiting for pending navigations. Status: ok
+[1644073129.046][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073129.050][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073129.050][INFO]: Waiting for pending navigations...
+[1644073129.052][INFO]: Done waiting for pending navigations. Status: ok
+[1644073129.074][INFO]: Waiting for pending navigations...
+[1644073129.075][INFO]: Done waiting for pending navigations. Status: ok
+[1644073129.076][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073131.978][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073131.978][INFO]: Waiting for pending navigations...
+[1644073131.980][INFO]: Done waiting for pending navigations. Status: ok
+[1644073132.003][INFO]: Waiting for pending navigations...
+[1644073132.004][INFO]: Done waiting for pending navigations. Status: ok
+[1644073132.005][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073134.873][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073134.873][INFO]: Waiting for pending navigations...
+[1644073134.874][INFO]: Done waiting for pending navigations. Status: ok
+[1644073134.889][INFO]: Waiting for pending navigations...
+[1644073134.890][INFO]: Done waiting for pending navigations. Status: ok
+[1644073134.890][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073135.402][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073135.402][INFO]: Waiting for pending navigations...
+[1644073135.403][INFO]: Done waiting for pending navigations. Status: ok
+[1644073135.444][INFO]: Waiting for pending navigations...
+[1644073135.446][INFO]: Done waiting for pending navigations. Status: ok
+[1644073135.446][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073136.462][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         TIC-TAC-TOE           \n|            X  |  2  |  3             \n|            X  |  O  |  X \n|            O  |  O  |  X \n|    Bilio - 0 / Luís - 0\nPlayer turn: Bilio",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "T", "I", "C", "-", "T", "A", "C", "-", "T", "O", "E", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "2", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "0", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "B", "i", "l", "i", "o", "" ]
+}
+[1644073136.462][INFO]: Waiting for pending navigations...
+[1644073136.463][INFO]: Done waiting for pending navigations. Status: ok
+[1644073137.385][INFO]: Waiting for pending navigations...
+[1644073137.461][INFO]: Done waiting for pending navigations. Status: ok
+[1644073137.461][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073137.468][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073137.468][INFO]: Waiting for pending navigations...
+[1644073137.474][INFO]: Done waiting for pending navigations. Status: ok
+[1644073137.503][INFO]: Waiting for pending navigations...
+[1644073137.523][INFO]: Done waiting for pending navigations. Status: ok
+[1644073137.523][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073140.376][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073140.377][INFO]: Waiting for pending navigations...
+[1644073140.378][INFO]: Done waiting for pending navigations. Status: ok
+[1644073140.390][INFO]: Waiting for pending navigations...
+[1644073140.392][INFO]: Done waiting for pending navigations. Status: ok
+[1644073140.392][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073140.905][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073140.905][INFO]: Waiting for pending navigations...
+[1644073140.907][INFO]: Done waiting for pending navigations. Status: ok
+[1644073140.945][INFO]: Waiting for pending navigations...
+[1644073140.946][INFO]: Done waiting for pending navigations. Status: ok
+[1644073140.946][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073141.951][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "por favor digite uma posição de 1 a 9",
+   "value": [ "p", "o", "r", " ", "f", "a", "v", "o", "r", " ", "d", "i", "g", "i", "t", "e", " ", "u", "m", "a", " ", "p", "o", "s", "i", "ç", "ã", "o", " ", "d", "e", " ", "1", " ", "a", " ", "9", "" ]
+}
+[1644073141.951][INFO]: Waiting for pending navigations...
+[1644073141.953][INFO]: Done waiting for pending navigations. Status: ok
+[1644073142.276][INFO]: Waiting for pending navigations...
+[1644073142.311][INFO]: Done waiting for pending navigations. Status: ok
+[1644073142.311][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073142.316][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073142.316][INFO]: Waiting for pending navigations...
+[1644073142.317][INFO]: Done waiting for pending navigations. Status: ok
+[1644073142.332][INFO]: Waiting for pending navigations...
+[1644073142.333][INFO]: Done waiting for pending navigations. Status: ok
+[1644073142.333][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073145.172][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073145.172][INFO]: Waiting for pending navigations...
+[1644073145.174][INFO]: Done waiting for pending navigations. Status: ok
+[1644073145.196][INFO]: Waiting for pending navigations...
+[1644073145.197][INFO]: Done waiting for pending navigations. Status: ok
+[1644073145.198][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073148.055][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073148.055][INFO]: Waiting for pending navigations...
+[1644073148.056][INFO]: Done waiting for pending navigations. Status: ok
+[1644073148.070][INFO]: Waiting for pending navigations...
+[1644073148.072][INFO]: Done waiting for pending navigations. Status: ok
+[1644073148.072][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073148.581][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073148.581][INFO]: Waiting for pending navigations...
+[1644073148.583][INFO]: Done waiting for pending navigations. Status: ok
+[1644073148.620][INFO]: Waiting for pending navigations...
+[1644073148.621][INFO]: Done waiting for pending navigations. Status: ok
+[1644073148.621][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073149.627][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "\n|         Bilio Ganhou!           \n|            X  |  O  |  3             \n|            X  |  O  |  X \n|            O  |  O  |  X \n|    Bilio - 1 / Luís - 0\nPlayer turn: FIM DE JOGO",
+   "value": [ "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "G", "a", "n", "h", "o", "u", "!", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "3", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "X", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", " ", "O", " ", " ", "|", " ", " ", "O", " ", " ", "|", " ", " ", "X", " ", "\n", "|", " ", " ", " ", " ", "B", "i", "l", "i", "o", " ", "-", " ", "1", " ", "/", " ", "L", "u", "í", "s", " ", "-", " ", "0", "\n", "P", "l", "a", "y", "e", "r", " ", "t", "u", "r", "n", ":", " ", "F", "I", "M", " ", "D", "E", " ", "J", "O", "G", "O", "" ]
+}
+[1644073149.627][INFO]: Waiting for pending navigations...
+[1644073149.629][INFO]: Done waiting for pending navigations. Status: ok
+[1644073150.691][INFO]: Waiting for pending navigations...
+[1644073150.756][INFO]: Done waiting for pending navigations. Status: ok
+[1644073150.756][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073150.784][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073150.784][INFO]: Waiting for pending navigations...
+[1644073150.822][INFO]: Done waiting for pending navigations. Status: ok
+[1644073150.837][INFO]: Waiting for pending navigations...
+[1644073150.840][INFO]: Done waiting for pending navigations. Status: ok
+[1644073150.840][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073151.352][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073151.352][INFO]: Waiting for pending navigations...
+[1644073151.353][INFO]: Done waiting for pending navigations. Status: ok
+[1644073151.392][INFO]: Waiting for pending navigations...
+[1644073151.393][INFO]: Done waiting for pending navigations. Status: ok
+[1644073151.393][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073152.400][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Você deseja jogar uma nova partida? (S ou N)",
+   "value": [ "V", "o", "c", "ê", " ", "d", "e", "s", "e", "j", "a", " ", "j", "o", "g", "a", "r", " ", "u", "m", "a", " ", "n", "o", "v", "a", " ", "p", "a", "r", "t", "i", "d", "a", "?", " ", "(", "S", " ", "o", "u", " ", "N", ")", "" ]
+}
+[1644073152.400][INFO]: Waiting for pending navigations...
+[1644073152.401][INFO]: Done waiting for pending navigations. Status: ok
+[1644073152.753][INFO]: Waiting for pending navigations...
+[1644073152.778][INFO]: Done waiting for pending navigations. Status: ok
+[1644073152.779][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073152.781][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073152.781][INFO]: Waiting for pending navigations...
+[1644073152.788][INFO]: Done waiting for pending navigations. Status: ok
+[1644073152.801][INFO]: Waiting for pending navigations...
+[1644073152.802][INFO]: Done waiting for pending navigations. Status: ok
+[1644073152.802][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073155.625][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073155.625][INFO]: Waiting for pending navigations...
+[1644073155.627][INFO]: Done waiting for pending navigations. Status: ok
+[1644073155.638][INFO]: Waiting for pending navigations...
+[1644073155.639][INFO]: Done waiting for pending navigations. Status: ok
+[1644073155.639][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073156.152][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073156.152][INFO]: Waiting for pending navigations...
+[1644073156.153][INFO]: Done waiting for pending navigations. Status: ok
+[1644073156.209][INFO]: Waiting for pending navigations...
+[1644073156.218][INFO]: Done waiting for pending navigations. Status: ok
+[1644073156.219][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073157.229][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073157.229][INFO]: Waiting for pending navigations...
+[1644073157.231][INFO]: Done waiting for pending navigations. Status: ok
+[1644073157.579][INFO]: Waiting for pending navigations...
+[1644073157.598][INFO]: Done waiting for pending navigations. Status: ok
+[1644073157.599][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073157.601][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073157.601][INFO]: Waiting for pending navigations...
+[1644073157.603][INFO]: Done waiting for pending navigations. Status: ok
+[1644073157.616][INFO]: Waiting for pending navigations...
+[1644073157.617][INFO]: Done waiting for pending navigations. Status: ok
+[1644073157.618][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073160.447][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073160.447][INFO]: Waiting for pending navigations...
+[1644073160.448][INFO]: Done waiting for pending navigations. Status: ok
+[1644073160.459][INFO]: Waiting for pending navigations...
+[1644073160.460][INFO]: Done waiting for pending navigations. Status: ok
+[1644073160.461][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073160.975][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073160.975][INFO]: Waiting for pending navigations...
+[1644073160.977][INFO]: Done waiting for pending navigations. Status: ok
+[1644073161.014][INFO]: Waiting for pending navigations...
+[1644073161.016][INFO]: Done waiting for pending navigations. Status: ok
+[1644073161.016][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073162.031][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073162.031][INFO]: Waiting for pending navigations...
+[1644073162.032][INFO]: Done waiting for pending navigations. Status: ok
+[1644073162.411][INFO]: Waiting for pending navigations...
+[1644073162.431][INFO]: Done waiting for pending navigations. Status: ok
+[1644073162.431][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073162.433][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073162.433][INFO]: Waiting for pending navigations...
+[1644073162.434][INFO]: Done waiting for pending navigations. Status: ok
+[1644073162.450][INFO]: Waiting for pending navigations...
+[1644073162.451][INFO]: Done waiting for pending navigations. Status: ok
+[1644073162.452][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073165.298][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073165.298][INFO]: Waiting for pending navigations...
+[1644073165.299][INFO]: Done waiting for pending navigations. Status: ok
+[1644073165.321][INFO]: Waiting for pending navigations...
+[1644073165.323][INFO]: Done waiting for pending navigations. Status: ok
+[1644073165.323][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073168.163][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073168.163][INFO]: Waiting for pending navigations...
+[1644073168.164][INFO]: Done waiting for pending navigations. Status: ok
+[1644073168.186][INFO]: Waiting for pending navigations...
+[1644073168.188][INFO]: Done waiting for pending navigations. Status: ok
+[1644073168.188][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073171.017][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073171.017][INFO]: Waiting for pending navigations...
+[1644073171.018][INFO]: Done waiting for pending navigations. Status: ok
+[1644073171.040][INFO]: Waiting for pending navigations...
+[1644073171.042][INFO]: Done waiting for pending navigations. Status: ok
+[1644073171.042][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073173.892][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073173.892][INFO]: Waiting for pending navigations...
+[1644073173.894][INFO]: Done waiting for pending navigations. Status: ok
+[1644073173.918][INFO]: Waiting for pending navigations...
+[1644073173.920][INFO]: Done waiting for pending navigations. Status: ok
+[1644073173.920][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073176.760][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073176.760][INFO]: Waiting for pending navigations...
+[1644073176.762][INFO]: Done waiting for pending navigations. Status: ok
+[1644073176.783][INFO]: Waiting for pending navigations...
+[1644073176.784][INFO]: Done waiting for pending navigations. Status: ok
+[1644073176.785][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073179.660][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073179.660][INFO]: Waiting for pending navigations...
+[1644073179.662][INFO]: Done waiting for pending navigations. Status: ok
+[1644073179.685][INFO]: Waiting for pending navigations...
+[1644073179.687][INFO]: Done waiting for pending navigations. Status: ok
+[1644073179.687][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073182.618][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073182.618][INFO]: Waiting for pending navigations...
+[1644073182.619][INFO]: Done waiting for pending navigations. Status: ok
+[1644073182.634][INFO]: Waiting for pending navigations...
+[1644073182.635][INFO]: Done waiting for pending navigations. Status: ok
+[1644073182.635][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073183.143][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073183.144][INFO]: Waiting for pending navigations...
+[1644073183.145][INFO]: Done waiting for pending navigations. Status: ok
+[1644073183.183][INFO]: Waiting for pending navigations...
+[1644073183.184][INFO]: Done waiting for pending navigations. Status: ok
+[1644073183.185][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073184.203][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073184.203][INFO]: Waiting for pending navigations...
+[1644073184.205][INFO]: Done waiting for pending navigations. Status: ok
+[1644073184.532][INFO]: Waiting for pending navigations...
+[1644073184.561][INFO]: Done waiting for pending navigations. Status: ok
+[1644073184.561][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073184.563][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073184.563][INFO]: Waiting for pending navigations...
+[1644073184.564][INFO]: Done waiting for pending navigations. Status: ok
+[1644073184.583][INFO]: Waiting for pending navigations...
+[1644073184.585][INFO]: Done waiting for pending navigations. Status: ok
+[1644073184.585][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073187.425][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073187.425][INFO]: Waiting for pending navigations...
+[1644073187.427][INFO]: Done waiting for pending navigations. Status: ok
+[1644073187.443][INFO]: Waiting for pending navigations...
+[1644073187.444][INFO]: Done waiting for pending navigations. Status: ok
+[1644073187.445][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073187.954][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073187.954][INFO]: Waiting for pending navigations...
+[1644073187.955][INFO]: Done waiting for pending navigations. Status: ok
+[1644073188.060][INFO]: Waiting for pending navigations...
+[1644073188.085][INFO]: Done waiting for pending navigations. Status: ok
+[1644073188.085][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073189.104][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073189.104][INFO]: Waiting for pending navigations...
+[1644073189.106][INFO]: Done waiting for pending navigations. Status: ok
+[1644073189.497][INFO]: Waiting for pending navigations...
+[1644073189.524][INFO]: Done waiting for pending navigations. Status: ok
+[1644073189.524][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073189.526][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073189.526][INFO]: Waiting for pending navigations...
+[1644073189.527][INFO]: Done waiting for pending navigations. Status: ok
+[1644073189.541][INFO]: Waiting for pending navigations...
+[1644073189.541][INFO]: Done waiting for pending navigations. Status: ok
+[1644073189.542][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073192.395][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073192.395][INFO]: Waiting for pending navigations...
+[1644073192.396][INFO]: Done waiting for pending navigations. Status: ok
+[1644073192.410][INFO]: Waiting for pending navigations...
+[1644073192.412][INFO]: Done waiting for pending navigations. Status: ok
+[1644073192.412][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073192.919][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073192.920][INFO]: Waiting for pending navigations...
+[1644073192.921][INFO]: Done waiting for pending navigations. Status: ok
+[1644073192.962][INFO]: Waiting for pending navigations...
+[1644073192.964][INFO]: Done waiting for pending navigations. Status: ok
+[1644073192.964][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073193.980][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073193.980][INFO]: Waiting for pending navigations...
+[1644073193.982][INFO]: Done waiting for pending navigations. Status: ok
+[1644073194.298][INFO]: Waiting for pending navigations...
+[1644073194.320][INFO]: Done waiting for pending navigations. Status: ok
+[1644073194.320][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073194.322][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073194.323][INFO]: Waiting for pending navigations...
+[1644073194.325][INFO]: Done waiting for pending navigations. Status: ok
+[1644073194.339][INFO]: Waiting for pending navigations...
+[1644073194.340][INFO]: Done waiting for pending navigations. Status: ok
+[1644073194.340][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073197.203][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073197.203][INFO]: Waiting for pending navigations...
+[1644073197.205][INFO]: Done waiting for pending navigations. Status: ok
+[1644073197.234][INFO]: Waiting for pending navigations...
+[1644073197.236][INFO]: Done waiting for pending navigations. Status: ok
+[1644073197.236][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073200.077][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073200.077][INFO]: Waiting for pending navigations...
+[1644073200.079][INFO]: Done waiting for pending navigations. Status: ok
+[1644073200.090][INFO]: Waiting for pending navigations...
+[1644073200.092][INFO]: Done waiting for pending navigations. Status: ok
+[1644073200.092][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073200.603][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073200.603][INFO]: Waiting for pending navigations...
+[1644073200.604][INFO]: Done waiting for pending navigations. Status: ok
+[1644073200.641][INFO]: Waiting for pending navigations...
+[1644073200.642][INFO]: Done waiting for pending navigations. Status: ok
+[1644073200.642][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073201.659][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Tchau :)",
+   "value": [ "T", "c", "h", "a", "u", " ", ":", ")", "" ]
+}
+[1644073201.659][INFO]: Waiting for pending navigations...
+[1644073201.661][INFO]: Done waiting for pending navigations. Status: ok
+[1644073201.871][INFO]: Waiting for pending navigations...
+[1644073201.887][INFO]: Done waiting for pending navigations. Status: ok
+[1644073201.887][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073201.890][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073201.890][INFO]: Waiting for pending navigations...
+[1644073201.892][INFO]: Done waiting for pending navigations. Status: ok
+[1644073201.907][INFO]: Waiting for pending navigations...
+[1644073201.909][INFO]: Done waiting for pending navigations. Status: ok
+[1644073201.909][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073204.756][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073204.756][INFO]: Waiting for pending navigations...
+[1644073204.758][INFO]: Done waiting for pending navigations. Status: ok
+[1644073204.770][INFO]: Waiting for pending navigations...
+[1644073204.771][INFO]: Done waiting for pending navigations. Status: ok
+[1644073204.772][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073205.289][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073205.289][INFO]: Waiting for pending navigations...
+[1644073205.291][INFO]: Done waiting for pending navigations. Status: ok
+[1644073205.336][INFO]: Waiting for pending navigations...
+[1644073205.340][INFO]: Done waiting for pending navigations. Status: ok
+[1644073205.340][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073206.351][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073206.352][INFO]: Waiting for pending navigations...
+[1644073206.353][INFO]: Done waiting for pending navigations. Status: ok
+[1644073206.737][INFO]: Waiting for pending navigations...
+[1644073206.782][INFO]: Done waiting for pending navigations. Status: ok
+[1644073206.782][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073206.785][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073206.785][INFO]: Waiting for pending navigations...
+[1644073206.786][INFO]: Done waiting for pending navigations. Status: ok
+[1644073206.806][INFO]: Waiting for pending navigations...
+[1644073206.808][INFO]: Done waiting for pending navigations. Status: ok
+[1644073206.808][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073209.659][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073209.659][INFO]: Waiting for pending navigations...
+[1644073209.662][INFO]: Done waiting for pending navigations. Status: ok
+[1644073209.677][INFO]: Waiting for pending navigations...
+[1644073209.679][INFO]: Done waiting for pending navigations. Status: ok
+[1644073209.679][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073210.191][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073210.192][INFO]: Waiting for pending navigations...
+[1644073210.197][INFO]: Done waiting for pending navigations. Status: ok
+[1644073210.263][INFO]: Waiting for pending navigations...
+[1644073210.267][INFO]: Done waiting for pending navigations. Status: ok
+[1644073210.267][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073211.280][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073211.281][INFO]: Waiting for pending navigations...
+[1644073211.283][INFO]: Done waiting for pending navigations. Status: ok
+[1644073211.613][INFO]: Waiting for pending navigations...
+[1644073211.656][INFO]: Done waiting for pending navigations. Status: ok
+[1644073211.656][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073211.669][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073211.669][INFO]: Waiting for pending navigations...
+[1644073211.693][INFO]: Done waiting for pending navigations. Status: ok
+[1644073211.711][INFO]: Waiting for pending navigations...
+[1644073211.713][INFO]: Done waiting for pending navigations. Status: ok
+[1644073211.713][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
+[1644073214.563][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND FindElement {
+   "using": "xpath",
+   "value": "//*[@id=\"main\"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]"
+}
+[1644073214.563][INFO]: Waiting for pending navigations...
+[1644073214.565][INFO]: Done waiting for pending navigations. Status: ok
+[1644073214.581][INFO]: Waiting for pending navigations...
+[1644073214.587][INFO]: Done waiting for pending navigations. Status: ok
+[1644073214.587][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073215.098][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND ClickElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d"
+}
+[1644073215.098][INFO]: Waiting for pending navigations...
+[1644073215.100][INFO]: Done waiting for pending navigations. Status: ok
+[1644073215.189][INFO]: Waiting for pending navigations...
+[1644073215.192][INFO]: Done waiting for pending navigations. Status: ok
+[1644073215.192][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE ClickElement
+[1644073216.209][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND TypeElement {
+   "id": "28db7f3c-2554-4506-b900-561c0883b71d",
+   "text": "Por favor insira *S* para sim e *N* para não",
+   "value": [ "P", "o", "r", " ", "f", "a", "v", "o", "r", " ", "i", "n", "s", "i", "r", "a", " ", "*", "S", "*", " ", "p", "a", "r", "a", " ", "s", "i", "m", " ", "e", " ", "*", "N", "*", " ", "p", "a", "r", "a", " ", "n", "ã", "o", "" ]
+}
+[1644073216.210][INFO]: Waiting for pending navigations...
+[1644073216.213][INFO]: Done waiting for pending navigations. Status: ok
+[1644073216.575][INFO]: Waiting for pending navigations...
+[1644073216.599][INFO]: Done waiting for pending navigations. Status: ok
+[1644073216.599][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE TypeElement
+[1644073216.602][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] COMMAND GetSource {
+
+}
+[1644073216.602][INFO]: Waiting for pending navigations...
+[1644073216.605][INFO]: Done waiting for pending navigations. Status: ok
+[1644073216.621][INFO]: Waiting for pending navigations...
+[1644073216.622][INFO]: Done waiting for pending navigations. Status: ok
+[1644073216.623][INFO]: [d2eef70b689f6c1c2df966e3df70dbbc] RESPONSE GetSource "\u003Chtml class=\"js serviceworker adownload cssanimations csstransitions webp webp-alpha webp-animation webp-lossless\" dir=\"LTR\" loc=\"pt-BR\" lang=\"pt-BR\">\u003Chead>\u003Cmeta charset=\"utf-8\">\u003Cmeta http-equiv=\"X..."
