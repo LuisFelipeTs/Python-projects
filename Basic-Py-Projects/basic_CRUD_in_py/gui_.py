@@ -1,33 +1,81 @@
 #Gui tkinter 
 import _tkinter
 from ast import And
+from subprocess import call
 from tkinter import *
 from wsgiref import validate
 from btt_func import loginBtt
 
-def tkinterBox(screen):
+def tkinterBox(screen, session_id = 0):
     tk_screen = Tk()
+    line= Label(text = "-----------------------------------")
+
     if screen == "login":
-        tk_screen.geometry("400x315" )
-        tk_screen.title("CRUD in Py")
-        lab = Label(text = "Login:",font =("Sans-serif", 15))
-        user_imput_lg = Text(tk_screen, height= 2, width= 25, bg= 'white')
-        lab = Label(text = "Password:",font =("Sans-serif", 15))
-        user_imput_ps = Text(tk_screen, height= 2, width= 25, bg= 'white')
-        btt_img_lg = PhotoImage("imgs/login_btt.png")
+        tk_screen.geometry("240x225" )
+        tk_screen.title("Login C.R.U.D")
+        lab = Label(text = "Login:",font =("Sans-serif", 10))
+        user_imput_lg = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        lab1 = Label(text = "Password:",font =("Sans-serif", 10))
+        user_imput_ps = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        #btt_img_lg = PhotoImage(file = "imgs/login_btt.png")
         btt_lg = Button(tk_screen,
-                 image= btt_img_lg,
-                 borderwidth = 0,
+                 borderwidth = 3,
                  text ="Login!",
                  command = lambda:
-                 loginBtt(user_imput_lg, user_imput_ps))
-        btt_img_rg = PhotoImage("imgs/gotoreg_btt.png")
+                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 )
         btt_rg = Button(tk_screen,
-                 image= btt_img_rg,
                  borderwidth = 0,
-                 text ="Registre-se!",
+                 text ="Não possui conta? Registre-se",
                  command = lambda:
-                 boxE((user_imput) , calc_output))
-        log_r = Label(text = "",font =("Sans-serif", 15), _Color = "red")
+                 [closeScreen(tk_screen), tkinterBox("regis")], )
+        btt_ex = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Exit!",
+                 command = lambda:
+                 closeScreen(tk_screen))
+        log_r = Label(text = "",font =("Sans-serif", 15))
+        widgets_list = [log_r, lab, user_imput_lg, lab1, user_imput_ps, line, btt_lg, btt_rg, btt_ex]
+        callScreen(widgets_list, tk_screen)
 
+    elif screen == "regis":
+        tk_screen.geometry("260x285" )
+        tk_screen.title("Registre-se C.R.U.D")
+        r_lab = Label(text = "Nome:",font =("Sans-serif", 10))
+        r_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_lab1 = Label(text = "Username:",font =("Sans-serif", 10))
+        r_user_imput_us = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_lab2 = Label(text = "Password:",font =("Sans-serif", 10))
+        r_user_imput_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_lab3 = Label(text = "Confirm Password:",font =("Sans-serif", 10))
+        r_user_imput_cpass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_btt_cd = Button(tk_screen,
+                 borderwidth = 3,
+                 text ="Cadastrar-se!",
+                 command = lambda:
+                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 )
+        r_btt_back = Button(tk_screen,
+                 borderwidth = 0,
+                 text ="Voltar ao login.",
+                 command = lambda:
+                 [closeScreen(tk_screen), tkinterBox("login")])
+        r_log_r = Label(text = "",font =("Sans-serif", 15))
+        widgets_list_reg = [r_log_r, r_lab, r_user_imput_nm, r_lab1, r_user_imput_us, r_lab2, r_user_imput_pass , r_lab3, r_user_imput_cpass , line, r_btt_cd, r_btt_back]
+        callScreen(widgets_list_reg, tk_screen)
 
+def callScreen(widgets_s, tk):
+    for widget in widgets_s:
+        widget.pack()
+    tk.mainloop()
+
+def checkIflog(log_r, tk_screen):
+    out_log = str(log_r.get("1.0", "end-1c"))
+    if out_log == "Loged":
+        closeScreen(tk_screen)
+        tkinterBox("menu")
+
+def closeScreen(screen):
+    screen.destroy()
+
+tkinterBox("login")
