@@ -4,7 +4,7 @@ from ast import And
 from subprocess import call
 from tkinter import *
 from wsgiref import validate
-from btt_func import loginBtt
+from btt_func import loginBtt, readBtt
 
 def tkinterBox(screen, session_id = 0):
     tk_screen = Tk()
@@ -130,6 +130,17 @@ def callScreen(widgets_s, tk):
         widget.pack()
     tk.mainloop()
 
+def callNewSt():
+    u_list = readBtt()
+    for user in u_list:
+         username_lab = Label(text = "Name: ",font =("Sans-serif bold", 10))
+         username_lab.pack()
+         username_lab_txt = Label(text = user.name ,font =("Sans-serif", 10.5))
+         username_lab_txt.pack()
+         line_u = Label(text = "-----------------------------------")
+         line_u.pack()
+    return
+
 def checkIflog(log_r, tk_screen):
     out_log = str(log_r.get("1.0", "end-1c"))
     if out_log == "Loged":
@@ -138,5 +149,9 @@ def checkIflog(log_r, tk_screen):
 
 def closeScreen(screen):
     screen.destroy()
+
+#def makeTxtbold(wid_txt):
+#    wid_txt.tag_configure("boldtext",font=wid_txt.cget("font")+" bold")
+#    wid_txt.tag_add("boldtext","sel.first","sel.last")
 
 tkinterBox("login")
