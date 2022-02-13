@@ -1,8 +1,9 @@
+from ast import Return
 from operator import index
 import User
 import pandas as pd
 
-user_data = pd.read_excel("user_data.xlsx")
+user_data = pd.read_excel("data/user_data.xlsx")
 
 def checkIfesxists(user):
     if user not in list(user_data["username"]): return False
@@ -24,8 +25,14 @@ def callUserinbase(user_id):
     ux = name = user_data["UX"][user_id]
     return User(user_id, name, username, password, ux)
 
-
+def callAlluser():
+    list_of_users = []
+    for u_id in user_data["user_id"]:
+        callAlluser.append(u_id)
+    return list_of_users
     
+
+
 
 
 #user_data = pd.read_excel("user_data.xlsx")
