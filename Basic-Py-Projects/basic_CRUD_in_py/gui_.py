@@ -75,7 +75,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 1,
                  text ="Show Users",
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 [backTo(tk_screen, "see_user")]
                  )
         config_btt = Button(tk_screen,
                  borderwidth = 1,
@@ -99,47 +99,41 @@ def tkinterBox(screen, session_id = 0):
     elif screen == "see_user":
         tk_screen.geometry("260x285" )
         tk_screen.title("Read C.R.U.D")
-        m_lab_title = Label(text = "Users",font =("Sans-serif", 13))
-        see_whoin_btt = Button(tk_screen,
-                 borderwidth = 1,
-                 text ="Show Users",
-                 command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
-                 )
-        config_btt = Button(tk_screen,
-                 borderwidth = 1,
-                 text ="Configurations",
-                 command = lambda:
-                 [closeScreen(tk_screen), tkinterBox("login")])
+        r_lab_title = Label(text = "Users",font =("Sans-serif", 13))
         back_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Go back",
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 [backTo("see_user" ,"menu" )]
                  )
-        exit_btt = Button(tk_screen,
-                 borderwidth = 2,
-                 text ="Exit",
-                 command = lambda:
-                 [closeScreen(tk_screen), tkinterBox("login")])
-        widgets_list_reg = [m_lab_title, see_whoin_btt, config_btt, back_btt, line, exit_btt]
-        callScreen(widgets_list_reg, tk_screen)
+        r_lab_title.pack()
+        callNewread()
+        back_btt.pack()
+        tk_screen.mainloop()
 
 def callScreen(widgets_s, tk):
     for widget in widgets_s:
         widget.pack()
     tk.mainloop()
 
-def callNewSt():
+def backTo(old_screen, new_screen):
+    closeScreen(old_screen)
+    tkinterBox(new_screen)
+
+def callNewread():
     u_list = readBtt()
     for user in u_list:
-         username_lab = Label(text = "Name: ",font =("Sans-serif bold", 10))
+         name_lab = Label(text = "Name: ",font =("Sans-serif bold", 10))
+         name_lab.pack()
+         name_lab_txt = Label(text = user.name ,font =("Sans-serif", 10.5))
+         name_lab_txt.pack()
+         username_lab = Label(text = "Username: ",font =("Sans-serif bold", 10))
          username_lab.pack()
          username_lab_txt = Label(text = user.name ,font =("Sans-serif", 10.5))
          username_lab_txt.pack()
          line_u = Label(text = "-----------------------------------")
          line_u.pack()
-    return
+    
 
 def checkIflog(log_r, tk_screen):
     out_log = str(log_r.get("1.0", "end-1c"))

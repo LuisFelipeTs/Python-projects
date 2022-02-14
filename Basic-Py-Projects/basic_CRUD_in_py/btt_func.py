@@ -13,4 +13,7 @@ def loginBtt(username_imp, password_imp, out_log):
     elif lg_response == "p":
         out_log.insert(END, "The Password is not correct")
  
+def readBtt():
+    list_of_users = callAlluser()
+    return list_of_users
 
