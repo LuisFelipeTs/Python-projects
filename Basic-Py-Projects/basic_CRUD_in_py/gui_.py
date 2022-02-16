@@ -23,8 +23,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Login!",
                  command = lambda:
-                 [closeScreen(tk_screen), tkinterBox("menu")]
-                 #loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)
+                 [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen)]
                  )
         btt_rg = Button(tk_screen,
                  borderwidth = 0,
@@ -36,7 +35,7 @@ def tkinterBox(screen, session_id = 0):
                  text ="Exit!",
                  command = lambda:
                  closeScreen(tk_screen))
-        log_r = Label(text = "",font =("Sans-serif", 15))
+        log_r = Text(tk_screen, height= 2, width= 30, bg= 'white',state= DISABLED)
         widgets_list = [ log_r, lab_title, lab, user_imput_lg, lab1, user_imput_ps, line, btt_lg, btt_rg, btt_ex]
         callScreen(widgets_list, tk_screen)
 
