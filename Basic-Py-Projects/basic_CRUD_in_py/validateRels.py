@@ -1,6 +1,6 @@
 from ast import Return
 from operator import index
-import User
+from User import User
 import pandas as pd
 
 user_data = pd.read_excel("data/user_data.xlsx")
@@ -11,7 +11,7 @@ def checkIfesxists(user):
 
 def getLogin(username, password):
     if checkIfesxists(username):
-        ind = index(user_data["username"][username])
+        ind = list(user_data["username"]).index(username)
         if user_data["password"][ind] == password:
             index_ = user_data["user_id"][ind]
             return True, index_
@@ -23,17 +23,19 @@ def callUserinbase(user_id):
     username = user_data["username"][user_id]
     password = user_data["password"][user_id]
     ux = name = user_data["UX"][user_id]
-    return User(user_id, name, username, password, ux)
+    new_u = User(user_id, name, username, password, ux)
+    return new_u
 
 def callAlluser():
     list_of_users = []
     for u_id in user_data["user_id"]:
-        callAlluser.append(u_id)
+        list_of_users.append(callUserinbase(u_id))
     return list_of_users
     
-
-
-
+def getNewid():
+    id_list = user_data["user_id"]
+    new_id = len(id_list)
+    return new_id
 
 #user_data = pd.read_excel("user_data.xlsx")
 #print(list(user_data["username"]))
