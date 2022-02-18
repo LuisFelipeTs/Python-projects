@@ -1,9 +1,7 @@
 #Gui tkinter 
 import _tkinter
 from ast import And
-from subprocess import call
 from tkinter import *
-from wsgiref import validate
 from btt_func import loginBtt, readBtt
 
 def tkinterBox(screen, session_id = 0):
@@ -36,7 +34,7 @@ def tkinterBox(screen, session_id = 0):
                  command = lambda:
                  closeScreen(tk_screen))
         log_r = Text(tk_screen, height= 2, width= 30, bg= 'white',state= DISABLED)
-        widgets_list = [ log_r, lab_title, lab, user_imput_lg, lab1, user_imput_ps, line, btt_lg, btt_rg, btt_ex]
+        widgets_list = [log_r, lab_title, lab, user_imput_lg, lab1, user_imput_ps, line, btt_lg, btt_rg, btt_ex]
         callScreen(widgets_list, tk_screen)
 
     elif screen == "regis":
@@ -106,9 +104,9 @@ def tkinterBox(screen, session_id = 0):
                  command = lambda:
                  [backTo(tk_screen ,"menu" )]
                  )
-        r_lab_title.pack()
+        r_lab_title.grid(column = 1, row = 0 )
         callNewread()
-        back_btt.pack()
+        back_btt.grid(column = 0, row = 0 )
         tk_screen.mainloop()
 
 def callScreen(widgets_s, tk):
@@ -123,30 +121,38 @@ def backTo(old_screen, new_screen):
 def callNewread():
     u_list = readBtt()
     print(u_list)
-    line_u = Label(text = "-------------------------------------------")
-    line_u.pack()
+    line_u = Label(text = "-------------")
+    line_u.grid(column = 0, row = 1 )
+    line_u1 = Label(text = "----------------------------")
+    line_u1.grid(column = 1, row = 1 )
+    actual_row = 1
     for user in u_list:
-         name_lab = Label(text = "Name: ",font =("Arial bold", 5))
-         name_lab.pack()
+         actual_row += 1
+         name_lab = Label(text = "Name: ",font =("Arial bold", 8))
+         name_lab.grid(column = 0, row = actual_row )
          name_lab_txt = Label(text = user.name ,font =("Sans-serif", 11))
-         name_lab_txt.pack()
-         username_lab = Label(text = "Username: ",font =("Arial bold", 5))
-         username_lab.pack()
+         name_lab_txt.place(anchor= "w")
+         name_lab_txt.grid(column = 1, row = actual_row )
+         actual_row += 1
+         username_lab = Label(text = "Username: ",font =("Arial bold", 8))
+         username_lab.grid(column = 0, row = actual_row )
          username_lab_txt = Label(text = user.username ,font =("Sans-serif", 11))
-         username_lab_txt.pack()
-         line_u = Label(text = "-------------------------------------------")
-         line_u.pack()
+         username_lab_txt.place(anchor= "w")
+         username_lab_txt.grid(column = 1, row = actual_row )
+         actual_row += 1
+         line_u = Label(text = "-------------")
+         line_u.grid(column = 0, row = actual_row )
+         line_u1 = Label(text = "----------------------------")
+         line_u1.grid(column = 1, row = actual_row )
     
 
 def checkIflog(log_r, tk_screen):
     out_log = str(log_r.get("1.0", "end-1c"))
-    if out_log == "Loged":
+    if out_log == "Loged!":
         closeScreen(tk_screen)
         tkinterBox("menu")
 
 def closeScreen(screen):
     screen.destroy()
-
- 
 
 tkinterBox("login")
