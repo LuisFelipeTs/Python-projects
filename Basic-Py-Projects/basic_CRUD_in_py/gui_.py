@@ -38,7 +38,7 @@ def tkinterBox(screen, session_id = 0):
         callScreen(widgets_list, tk_screen)
 
     elif screen == "regis":
-        tk_screen.geometry("260x285" )
+        tk_screen.geometry("260x295" )
         tk_screen.title("Registre-se C.R.U.D")
         r_lab_title = Label(text = "Register",font =("Sans-serif", 13))
         r_lab = Label(text = "Name:",font =("Sans-serif", 10))
@@ -53,14 +53,15 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Register",
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 [print(str(r_user_imput_nm.get("1.0", "end-1c")))]
                  )
         r_btt_back = Button(tk_screen,
                  borderwidth = 0,
                  text ="back to the login screen.",
                  command = lambda:
                  [closeScreen(tk_screen), tkinterBox("login")])
-        r_log_r = Label(text = "",font =("Sans-serif", 15))
+
+        r_log_r = Text(tk_screen, height= 2, width= 30, bg= 'white', state= DISABLED)
         widgets_list_reg = [ r_log_r, r_lab_title, r_lab, r_user_imput_nm, r_lab1, r_user_imput_us, r_lab2, r_user_imput_pass , r_lab3, r_user_imput_cpass , line, r_btt_cd, r_btt_back]
         callScreen(widgets_list_reg, tk_screen)
 
