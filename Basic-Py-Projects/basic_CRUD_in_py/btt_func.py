@@ -1,9 +1,10 @@
-from sre_parse import State
+from email import message
 from tkinter import *
 from RfromCrud import *
+from CfromCRUD import *
 import os
 
-def checkIfconnected():
+def checkIfconnectedtobase():
     if ~(os.path.exists("data/user_data.xlsx")):
         return True
     else: return False
@@ -24,16 +25,16 @@ def regisBtt(name, username, password, confirm_password, out_log):
     username = str(username.get("1.0", "end-1c"))
     password = str(password.get("1.0", "end-1c"))
     confirm_password = str(confirm_password.get("1.0", "end-1c"))
-    if name == "" or (len(name) < 3):
-        changeLog(out_log, "The name must have at least 3 letters")
-    elif username == "" or (len(name) < 4):
-        changeLog(out_log, "The username must have at least 4 letters")
-    elif password == "" or (len(name) < 3):
-        changeLog(out_log, "The password must have at least 4 letters")
-    elif confirm_password != password:
-        changeLog(out_log, "The Confirm password must be equal to the password")
+    validate = False
+    message_log = ""
+    if name == "" or (len(name) < 3): message_log = "The name must have at least 3 letters"
+    elif username == "" or (len(name) < 4): message_log = "The username must have at least 4 letters"
+    elif password == "" or (len(name) < 3): message_log = "The password must have at least 4 letters"
+    elif confirm_password != password: message_log = "The Confirm password must be equal to the password"        
     else:
-        registerUser(name, username, password, confirm_password)
+        validate, message_log = registerUser(name, username, password, confirm_password)
+    changeLog(out_log, message_log)
+    return validate
 
 
 def changeLog(out_log, log_txt):
