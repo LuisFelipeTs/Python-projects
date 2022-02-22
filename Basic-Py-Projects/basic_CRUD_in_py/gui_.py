@@ -2,7 +2,8 @@
 import _tkinter
 from ast import And
 from tkinter import *
-from btt_func import loginBtt, readBtt
+from turtle import back
+from btt_func import loginBtt, readBtt, regisBtt
 
 def tkinterBox(screen, session_id = 0):
     tk_screen = Tk()
@@ -21,7 +22,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Login!",
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen)]
+                 [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen, "menu")]
                  )
         btt_rg = Button(tk_screen,
                  borderwidth = 0,
@@ -38,7 +39,7 @@ def tkinterBox(screen, session_id = 0):
         callScreen(widgets_list, tk_screen)
 
     elif screen == "regis":
-        tk_screen.geometry("260x295" )
+        tk_screen.geometry("260x305" )
         tk_screen.title("Registre-se C.R.U.D")
         r_lab_title = Label(text = "Register",font =("Sans-serif", 13))
         r_lab = Label(text = "Name:",font =("Sans-serif", 10))
@@ -53,7 +54,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Register",
                  command = lambda:
-                 [print(str(r_user_imput_nm.get("1.0", "end-1c")))]
+                 [regisBtt(r_user_imput_nm, r_user_imput_us, r_user_imput_pass, r_user_imput_cpass, r_log_r), checkIflog(r_log_r, tk_screen, "login")]
                  )
         r_btt_back = Button(tk_screen,
                  borderwidth = 0,
@@ -62,7 +63,7 @@ def tkinterBox(screen, session_id = 0):
                  [closeScreen(tk_screen), tkinterBox("login")])
 
         r_log_r = Text(tk_screen, height= 2, width= 30, bg= 'white', state= DISABLED)
-        widgets_list_reg = [ r_log_r, r_lab_title, r_lab, r_user_imput_nm, r_lab1, r_user_imput_us, r_lab2, r_user_imput_pass , r_lab3, r_user_imput_cpass , line, r_btt_cd, r_btt_back]
+        widgets_list_reg = [r_log_r, r_lab_title, r_lab, r_user_imput_nm, r_lab1, r_user_imput_us, r_lab2, r_user_imput_pass , r_lab3, r_user_imput_cpass , line, r_btt_cd, r_btt_back]
         callScreen(widgets_list_reg, tk_screen)
 
     elif screen == "menu":
@@ -110,6 +111,27 @@ def tkinterBox(screen, session_id = 0):
         back_btt.grid(column = 0, row = 0 )
         tk_screen.mainloop()
 
+    elif screen == "update":
+        tk_screen.geometry("360x285" )
+        tk_screen.title("Read C.R.U.D")
+        u_title = Label(text = "Update",font =("Sans-serif", 13))
+        u_title.grid( column = 1, row= 0)
+        back_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Go back",
+                 command = lambda:
+                 [backTo(tk_screen ,"menu" )]
+                 )
+        back_btt.grid(column = 0, row = 0)
+        line_m = Label(text = "-----------")
+        line_m2 = Label(text = "-------------------------------------------")
+        line_m.grid(column=0 , row= 1)
+        line_m2.grid(column= 1 , row= 1)
+
+
+
+
+
 def callScreen(widgets_s, tk):
     for widget in widgets_s:
         widget.pack()
@@ -121,7 +143,6 @@ def backTo(old_screen, new_screen):
 
 def callNewread():
     u_list = readBtt()
-    print(u_list)
     line_u = Label(text = "-------------")
     line_u.grid(column = 0, row = 1 )
     line_u1 = Label(text = "----------------------------")
@@ -147,11 +168,11 @@ def callNewread():
          line_u1.grid(column = 1, row = actual_row )
     
 
-def checkIflog(log_r, tk_screen):
+def checkIflog(log_r, tk_screen, nw_screen):
     out_log = str(log_r.get("1.0", "end-1c"))
     if out_log == "Loged!":
         closeScreen(tk_screen)
-        tkinterBox("menu")
+        tkinterBox(nw_screen)
 
 def closeScreen(screen):
     screen.destroy()

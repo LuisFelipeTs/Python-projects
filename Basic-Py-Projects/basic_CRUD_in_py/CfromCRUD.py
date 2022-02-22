@@ -17,10 +17,12 @@ def registerUser(user):
         user.UX_]], columns=['user_id', 'name', 'username', 'password', 'UX'])
     
     union_frames = [user_data, new_u]
-    new_user_base = pd.concat(union_frames, sort = False, ignore_index= True)
-    
+    conc_np = np.concatenate(union_frames, axis = 0)
+    new_user_base = pd.DataFrame(conc_np, columns= ['user_id', 'name', 'username', 'password', 'UX'])
+    #new_user_base = pd.concat(union_frames, sort = False, axis = 0, ignore_index= True)
+
     with pd.ExcelWriter("data/user_data.xlsx") as writer:
-        new_user_base.to_excel(writer)
+        new_user_base.to_excel(writer, index= False)
     return True, "Loged!"
     
     

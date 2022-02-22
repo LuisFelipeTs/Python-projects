@@ -33,9 +33,9 @@ def regisBtt(name, username, password, confirm_password, out_log):
     elif confirm_password != password: message_log = "The Confirm password must be equal to the password"        
     else:
         validate, message_log = registerUser(User(getNewid(), name, username, password, ""))
-    if message_log != "Loged!": 
-        print('sda')
-        changeLog(out_log, message_log)
+    if message_log == "Loged!": 
+        print("...")
+        changeLog(out_log, "Loged!")
     return validate
 
 
