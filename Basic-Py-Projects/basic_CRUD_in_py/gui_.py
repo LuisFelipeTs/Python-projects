@@ -3,9 +3,10 @@ import _tkinter
 from ast import And
 from tkinter import *
 from turtle import back
+from RfromCrud import callUserinbase, getUid
 from btt_func import loginBtt, readBtt, regisBtt
 
-def tkinterBox(screen, session_id = 0):
+def tkinterBox(screen):
     tk_screen = Tk()
     line= Label(text = "-----------------------------------")
 
@@ -22,7 +23,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Login!",
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen, "menu")]
+                 [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen, "menu", user_imput_lg)]
                  )
         btt_rg = Button(tk_screen,
                  borderwidth = 0,
@@ -54,7 +55,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 3,
                  text ="Register",
                  command = lambda:
-                 [regisBtt(r_user_imput_nm, r_user_imput_us, r_user_imput_pass, r_user_imput_cpass, r_log_r), checkIflog(r_log_r, tk_screen, "login")]
+                 [regisBtt(r_user_imput_nm, r_user_imput_us, r_user_imput_pass, r_user_imput_cpass, r_log_r), checkIflog(r_log_r, tk_screen, "menu", r_user_imput_us)]
                  )
         r_btt_back = Button(tk_screen,
                  borderwidth = 0,
@@ -81,7 +82,7 @@ def tkinterBox(screen, session_id = 0):
                  borderwidth = 1,
                  text ="Configurations",
                  command = lambda:
-                 [closeScreen(tk_screen), tkinterBox("login")])
+                 [closeScreen(tk_screen), tkinterBox("update")])
         back_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Go back",
@@ -112,6 +113,7 @@ def tkinterBox(screen, session_id = 0):
         tk_screen.mainloop()
 
     elif screen == "update":
+        session_u = callUserinbase(changeSession(False))
         tk_screen.geometry("360x285" )
         tk_screen.title("Read C.R.U.D")
         u_title = Label(text = "Update",font =("Sans-serif", 13))
@@ -127,9 +129,23 @@ def tkinterBox(screen, session_id = 0):
         line_m2 = Label(text = "-------------------------------------------")
         line_m.grid(column=0 , row= 1)
         line_m2.grid(column= 1 , row= 1)
-
-
-
+        name_lab = Label(text = "Name: " + session_u.name ,font =("Arial bold", 8))
+        name_lab.grid(column = 1, row = 2 )
+        ch_n_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Change Name",
+                 command = lambda:
+                 [backTo(tk_screen ,"menu" )]
+                 )
+        pass_lab = Label(text = "Password: " + session_u.name ,font =("Arial bold", 8))
+        pass_lab.grid(column = 1, row = 3 )
+        ch_n_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Change Pass",
+                 command = lambda:
+                 [backTo(tk_screen ,"menu" )]
+                 )
+        ch_n_btt.grid(column = 0 , row = 3)
 
 
 def callScreen(widgets_s, tk):
@@ -168,13 +184,21 @@ def callNewread():
          line_u1.grid(column = 1, row = actual_row )
     
 
-def checkIflog(log_r, tk_screen, nw_screen):
+def checkIflog(log_r, tk_screen, nw_screen, username):
     out_log = str(log_r.get("1.0", "end-1c"))
+    username = str(username.get("1.0", "end-1c"))
     if out_log == "Loged!":
+        changeSession(True, getUid(username))
         closeScreen(tk_screen)
         tkinterBox(nw_screen)
 
 def closeScreen(screen):
     screen.destroy()
+
+def changeSession(ch , new_id = 0):
+    global session_id
+    if ch == True: session_id = new_id
+    return session_id
+
 
 tkinterBox("login")
