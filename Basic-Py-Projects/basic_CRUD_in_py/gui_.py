@@ -1,8 +1,7 @@
 #Gui tkinter 
 import _tkinter
 from ast import And
-from tkinter import *
-from turtle import back
+from tkinter import messagebox, Tk, Label, Button, Text, DISABLED
 from RfromCrud import callUserinbase, getUid
 from btt_func import loginBtt, readBtt, regisBtt
 
@@ -55,7 +54,7 @@ def tkinterBox(screen):
                  borderwidth = 3,
                  text ="Register",
                  command = lambda:
-                 [regisBtt(r_user_imput_nm, r_user_imput_us, r_user_imput_pass, r_user_imput_cpass, r_log_r), checkIflog(r_log_r, tk_screen, "menu", r_user_imput_us)]
+                 [regisBtt(r_user_imput_nm, r_user_imput_us, r_user_imput_pass, r_user_imput_cpass, r_log_r), checkIflog(r_log_r, tk_screen, "menu", r_user_imput_us, True)]
                  )
         r_btt_back = Button(tk_screen,
                  borderwidth = 0,
@@ -146,6 +145,8 @@ def tkinterBox(screen):
                  [backTo(tk_screen ,"menu" )]
                  )
         ch_n_btt.grid(column = 0 , row = 3)
+        pass_lab = Label(text = "color: " + session_u.name ,font =("Arial bold", 8))
+        pass_lab.grid(column = 1, row = 4 )
 
 
 def callScreen(widgets_s, tk):
@@ -184,10 +185,12 @@ def callNewread():
          line_u1.grid(column = 1, row = actual_row )
     
 
-def checkIflog(log_r, tk_screen, nw_screen, username):
+def checkIflog(log_r, tk_screen, nw_screen, username, register = False):
     out_log = str(log_r.get("1.0", "end-1c"))
     username = str(username.get("1.0", "end-1c"))
     if out_log == "Loged!":
+        if register: alert("Register Info!", "Registered!")
+        else: alert("Login Info!", "Loged!")
         changeSession(True, getUid(username))
         closeScreen(tk_screen)
         tkinterBox(nw_screen)
@@ -200,5 +203,12 @@ def changeSession(ch , new_id = 0):
     if ch == True: session_id = new_id
     return session_id
 
+#https://www.foxinfotech.in/2019/01/alert-message-box-in-python-using-tkinter.html
+def alert(title, message, kind='info', hidemain=True):
+    if kind not in ('error', 'warning', 'info'):
+        raise ValueError('Unsupported alert kind.')
+    show_method = getattr(messagebox, 'show{}'.format(kind))
+    show_method(title, message)
+#---------------------------------------------------------------------------------
 
 tkinterBox("login")
