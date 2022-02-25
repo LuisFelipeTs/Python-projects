@@ -4,6 +4,8 @@ from RfromCrud import *
 from CfromCRUD import *
 import os
 
+from UfromCRUD import updateName, updatePassword
+
 def checkIfconnectedtobase():
     if ~(os.path.exists("data/user_data.xlsx")):
         return True
@@ -37,6 +39,15 @@ def regisBtt(name, username, password, confirm_password, out_log):
         print("...")
         changeLog(out_log, "Loged!")
     return validate
+
+def updateElement(session_id, attr, new_attr, password, confirm_pas = 0):
+    if attr == "Name":
+        updateName(callUserinbase(session_id), new_attr)
+    elif attr == "Pass":
+        if confirm_pas == 0:
+            return False , "pn"
+        else:
+            updatePassword(callUserinbase(session_id), password, new_attr, confirm_pas)
 
 
 def changeLog(out_log, log_txt):

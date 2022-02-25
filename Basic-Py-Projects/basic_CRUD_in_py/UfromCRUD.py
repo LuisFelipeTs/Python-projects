@@ -23,14 +23,22 @@ def updatePassword(user, password, new_password, new_password_cf):
     else: return False, "wp"
 
 def updateUx(user, new_ux, add_del):
+    old_ux = user._UX
     if add_del:
         if new_ux not in user.UX:
             if new_ux in list(ux_guide["ux_id"]):
-                old_ux = user._UX
                 old_ux += new_ux
                 user_data.loc[user_data['user_id'] ==  user.user_id, 'UX'] = old_ux
                 return True, ""
             else: return False, "ne"
         else: return False, "ai"
     else:
-        pass
+       if new_ux in user.UX:
+           old_ux -= new_ux
+           user_data.loc[user_data['user_id'] ==  user.user_id, 'UX'] = old_ux
+           return True, ""
+       else: return False, "ao"
+
+def saveU():
+    with pd.ExcelWriter("data/user_data.xlsx") as writer:
+        user_data.to_excel(writer, index= False)
