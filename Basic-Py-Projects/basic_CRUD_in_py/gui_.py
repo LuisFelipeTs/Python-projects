@@ -147,6 +147,10 @@ def tkinterBox(screen):
         ch_n_btt.grid(column = 0 , row = 3)
         pass_lab = Label(text = "color: " + session_u.name ,font =("Arial bold", 8))
         pass_lab.grid(column = 1, row = 4 )
+    
+    elif screen == 'update+':
+        tk_screen.geometry("260x185" )
+        tk_screen.title("Update ")
 
 
 def callScreen(widgets_s, tk):
