@@ -134,24 +134,53 @@ def tkinterBox(screen):
                  borderwidth = 1,
                  text ="Change Name",
                  command = lambda:
-                 [backTo(tk_screen ,"menu" )]
+                 [backTo(tk_screen ,"update+N" )]
                  )
+        ch_n_btt.grid(column = 0 , row = 2)
         pass_lab = Label(text = "Password: " + session_u.name ,font =("Arial bold", 8))
         pass_lab.grid(column = 1, row = 3 )
-        ch_n_btt = Button(tk_screen,
+        ch_p_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Change Pass",
                  command = lambda:
                  [backTo(tk_screen ,"menu" )]
                  )
-        ch_n_btt.grid(column = 0 , row = 3)
+        ch_p_btt.grid(column = 0 , row = 3)
         pass_lab = Label(text = "color: " + session_u.name ,font =("Arial bold", 8))
         pass_lab.grid(column = 1, row = 4 )
     
-    elif screen == 'update+':
+    elif screen == 'update+N':
+        session_u = callUserinbase(changeSession(False))
         tk_screen.geometry("260x185" )
-        tk_screen.title("Update ")
+        tk_screen.title("Update Name")
+        back_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Go back",
+                 command = lambda:
+                 [backTo(tk_screen ,"update")]
+                 )
+        back_btt.grid(column = 0, row = 0)
+        u_title = Label(text = "Update Name",font =("Sans-serif", 13))
+        u_title.grid(column = 1, row= 0)
+        n_actual1 = Label(text = "Actual Name:",font =("Sans-serif", 8))
+        n_actual1.grid(column = 0, row= 1)
+        n_actual2 = Label(text = session_u.name ,font =("Sans-serif", 9))
+        n_actual2.grid(column = 1, row= 1)
+        up_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_nm.grid(column = 1, row = 2)
+        up_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Update!",
+                 command = lambda:
+                 [backTo(tk_screen ,"update")]
+                 )
+        up_btt.grid(column = 1, row= 3)
 
+
+
+    elif screen == 'update+P':
+        tk_screen.geometry("260x235" )
+        tk_screen.title("Update Password")
 
 def callScreen(widgets_s, tk):
     for widget in widgets_s:
