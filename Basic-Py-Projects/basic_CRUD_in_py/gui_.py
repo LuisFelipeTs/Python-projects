@@ -1,9 +1,8 @@
 #Gui tkinter 
-import _tkinter
 from ast import And
 from tkinter import messagebox, Tk, Label, Button, Text, DISABLED
 from RfromCrud import callUserinbase, getUid
-from btt_func import loginBtt, readBtt, regisBtt
+from btt_func import loginBtt, readBtt, regisBtt, updateElement
 
 def tkinterBox(screen):
     tk_screen = Tk()
@@ -137,7 +136,7 @@ def tkinterBox(screen):
                  [backTo(tk_screen ,"update+N" )]
                  )
         ch_n_btt.grid(column = 0 , row = 2)
-        pass_lab = Label(text = "Password: " + session_u.name ,font =("Arial bold", 8))
+        pass_lab = Label(text = "Password: " + len(str(session_u.password)) * '*' ,font =("Arial bold", 8))
         pass_lab.grid(column = 1, row = 3 )
         ch_p_btt = Button(tk_screen,
                  borderwidth = 1,
@@ -166,16 +165,22 @@ def tkinterBox(screen):
         n_actual1.grid(column = 0, row= 1)
         n_actual2 = Label(text = session_u.name ,font =("Sans-serif", 9))
         n_actual2.grid(column = 1, row= 1)
+        n_new = Label(text = "New Name:",font =("Sans-serif", 8))
+        n_new.grid(column = 0, row= 2)
         up_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
         up_user_imput_nm.grid(column = 1, row = 2)
+        up_pass = Label(text = "Password:",font = ("Sans-serif", 8))
+        up_pass.grid(column = 0, row= 3)
+        up_user_imput_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_pass.grid(column = 1, row = 3)
         up_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Update!",
                  command = lambda:
-                 [backTo(tk_screen ,"update")]
+                 [updateElement(session_u, "Name", up_user_imput_nm, log_u, up_user_imput_pass), checkIfup(log_u, tk_screen)]
                  )
-        up_btt.grid(column = 1, row= 3)
-
+        up_btt.grid(column = 1, row= 4)
+        log_u = Text(tk_screen)
 
 
     elif screen == 'update+P':
@@ -227,6 +232,16 @@ def checkIflog(log_r, tk_screen, nw_screen, username, register = False):
         changeSession(True, getUid(username))
         closeScreen(tk_screen)
         tkinterBox(nw_screen)
+
+def checkIfup(log, tk_screen):
+    out_log = str(log.get("1.0", "end-1c"))
+    if out_log == "Ok":
+        alert("Update Status!", "Update successfully!", kind= "info")
+        closeScreen(tk_screen)
+        tkinterBox("update")
+    else:
+
+        alert("Update Status!", out_log , kind= "error")
 
 def closeScreen(screen):
     screen.destroy()
