@@ -40,15 +40,19 @@ def regisBtt(name, username, password, confirm_password, out_log):
         changeLog(out_log, "Loged!")
     return validate
 
-def updateElement(session_id, attr, new_attr, password, confirm_pas = 0):
+def updateElement(user, attr, new_attr, log, password,  confirm_pas = 0):
     if attr == "Name":
-        updateName(callUserinbase(session_id), new_attr)
+        name = str(new_attr.get("1.0", "end-1c"))
+        password_ = str(password.get("1.0", "end-1c"))
+        validate, message_ = updateName(user , name, password_)
     elif attr == "Pass":
         if confirm_pas == 0:
-            return False , "pn"
+            return False , "Confirm you password before update"
         else:
-            updatePassword(callUserinbase(session_id), password, new_attr, confirm_pas)
-
+            validate, message_ = updatePassword(user.user_id, password, new_attr, confirm_pas)
+    
+    if validate: changeLog(log, "Ok")
+    else: changeLog(log, message_)
 
 def changeLog(out_log, log_txt):
     out_log["state"] = NORMAL
