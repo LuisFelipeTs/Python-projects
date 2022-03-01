@@ -186,6 +186,36 @@ def tkinterBox(screen):
     elif screen == 'update+P':
         tk_screen.geometry("260x235" )
         tk_screen.title("Update Password")
+        session_u = callUserinbase(changeSession(False))
+        back_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Go back",
+                 command = lambda:
+                 [backTo(tk_screen ,"update")]
+                 )
+        back_btt.grid(column = 0, row = 0)
+        u_title = Label(text = "Update Password",font =("Sans-serif", 13))
+        u_title.grid(column = 1, row= 0)
+        n_actual1 = Label(text = "Actual Password:",font =("Sans-serif", 8))
+        n_actual1.grid(column = 0, row= 1)
+        n_actual2 = Label(text = session_u.name ,font =("Sans-serif", 9))
+        n_actual2.grid(column = 1, row= 1)
+        n_new = Label(text = "New Name:",font =("Sans-serif", 8))
+        n_new.grid(column = 0, row= 2)
+        up_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_nm.grid(column = 1, row = 2)
+        up_pass = Label(text = "Password:",font = ("Sans-serif", 8))
+        up_pass.grid(column = 0, row= 3)
+        up_user_imput_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_pass.grid(column = 1, row = 3)
+        up_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Update!",
+                 command = lambda:
+                 [updateElement(session_u, "Name", up_user_imput_nm, log_u, up_user_imput_pass), checkIfup(log_u, tk_screen)]
+                 )
+        up_btt.grid(column = 1, row= 4)
+        log_u = Text(tk_screen)
 
 def callScreen(widgets_s, tk):
     for widget in widgets_s:
