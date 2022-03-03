@@ -142,7 +142,7 @@ def tkinterBox(screen):
                  borderwidth = 1,
                  text ="Change Pass",
                  command = lambda:
-                 [backTo(tk_screen ,"menu" )]
+                 [backTo(tk_screen ,"update+P" )]
                  )
         ch_p_btt.grid(column = 0 , row = 3)
         pass_lab = Label(text = "color: " + session_u.name ,font =("Arial bold", 8))
@@ -150,7 +150,7 @@ def tkinterBox(screen):
     
     elif screen == 'update+N':
         session_u = callUserinbase(changeSession(False))
-        tk_screen.geometry("260x185" )
+        tk_screen.geometry("260x130" )
         tk_screen.title("Update Name")
         back_btt = Button(tk_screen,
                  borderwidth = 1,
@@ -184,7 +184,7 @@ def tkinterBox(screen):
 
 
     elif screen == 'update+P':
-        tk_screen.geometry("260x235" )
+        tk_screen.geometry("260x130" )
         tk_screen.title("Update Password")
         session_u = callUserinbase(changeSession(False))
         back_btt = Button(tk_screen,
@@ -198,13 +198,13 @@ def tkinterBox(screen):
         u_title.grid(column = 1, row= 0)
         n_actual1 = Label(text = "Actual Password:",font =("Sans-serif", 8))
         n_actual1.grid(column = 0, row= 1)
-        n_actual2 = Label(text = session_u.name ,font =("Sans-serif", 9))
-        n_actual2.grid(column = 1, row= 1)
-        n_new = Label(text = "New Name:",font =("Sans-serif", 8))
+        up_user_imput_o_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_o_pass.grid(column = 1, row= 1)
+        n_new = Label(text = "New Password:",font =("Sans-serif", 8))
         n_new.grid(column = 0, row= 2)
-        up_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
-        up_user_imput_nm.grid(column = 1, row = 2)
-        up_pass = Label(text = "Password:",font = ("Sans-serif", 8))
+        up_user_imput_n_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        up_user_imput_n_pass.grid(column = 1, row = 2)
+        up_pass = Label(text = "Confirm Password:",font = ("Sans-serif", 8))
         up_pass.grid(column = 0, row= 3)
         up_user_imput_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
         up_user_imput_pass.grid(column = 1, row = 3)
@@ -212,7 +212,7 @@ def tkinterBox(screen):
                  borderwidth = 1,
                  text ="Update!",
                  command = lambda:
-                 [updateElement(session_u, "Name", up_user_imput_nm, log_u, up_user_imput_pass), checkIfup(log_u, tk_screen)]
+                 [updateElement(session_u, "Pass", up_user_imput_n_pass, log_u, up_user_imput_o_pass, up_user_imput_pass), checkIfup(log_u, tk_screen)]
                  )
         up_btt.grid(column = 1, row= 4)
         log_u = Text(tk_screen)
@@ -262,6 +262,8 @@ def checkIflog(log_r, tk_screen, nw_screen, username, register = False):
         changeSession(True, getUid(username))
         closeScreen(tk_screen)
         tkinterBox(nw_screen)
+    else: alert("Login Info!", "Error: " + out_log, kind= 'error')
+
 
 def checkIfup(log, tk_screen):
     out_log = str(log.get("1.0", "end-1c"))
