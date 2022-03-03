@@ -1,14 +1,11 @@
 
-from numpy import True_
-
-
 class User:
-    def __init__(self, user_id, name, username, password):
+    def __init__(self, user_id, name, username, password, ux):
         self.user_id = user_id
         self.name = name
         self.username = username
         self.password = password
-        self.UX_ = ""
+        self.UX_ = ux
 
     def __str__(self):
         return self.name

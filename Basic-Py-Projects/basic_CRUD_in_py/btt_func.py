@@ -46,10 +46,12 @@ def updateElement(user, attr, new_attr, log, password,  confirm_pas = 0):
         password_ = str(password.get("1.0", "end-1c"))
         validate, message_ = updateName(user , name, password_)
     elif attr == "Pass":
+        password_ = str(new_attr.get("1.0", "end-1c"))
         if confirm_pas == 0:
-            return False , "Confirm you password before update"
+            message_ = "Confirm you password before update"
         else:
-            validate, message_ = updatePassword(user.user_id, password, new_attr, confirm_pas)
+            password_c = str(confirm_pas.get("1.0", "end-1c"))
+            validate, message_ = updatePassword(user, password, password_, password_c)
     
     if validate: changeLog(log, "Ok")
     else: changeLog(log, message_)

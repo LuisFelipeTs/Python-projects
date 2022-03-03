@@ -9,7 +9,6 @@ def updateName(user, new_name, password):
         password_u = str(user.password)
         if password_u == password:
             user_data.loc[user_data['name'] ==  user.name, 'name'] = new_name
-            print("...")
             saveU(user_data)
             return True, ""
         else: return False, "The password is not correct"
@@ -21,6 +20,7 @@ def updatePassword(user, password, new_password, new_password_cf):
         if password != new_password:
                 if new_password == new_password_cf:
                     user_data.loc[user_data['user_id'] ==  user.user_id, 'password'] = new_password
+                    saveU(user_data)
                     return True, ""
                 else: return False, "The confirmation is not equal to the new password"
         else: return False, "The password is equal to the old one"
