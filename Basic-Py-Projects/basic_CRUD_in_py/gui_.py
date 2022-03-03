@@ -1,6 +1,6 @@
 #Gui tkinter 
-from ast import And
-from tkinter import messagebox, Tk, Label, Button, Text, DISABLED
+from tkinter import RIGHT, Y, Grid, messagebox, Tk, Label, Button, Text, DISABLED, ttk
+import tkinter as tk
 from RfromCrud import callUserinbase, getUid
 from btt_func import loginBtt, readBtt, regisBtt, updateElement
 
@@ -98,16 +98,27 @@ def tkinterBox(screen):
     elif screen == "see_user":
         tk_screen.geometry("260x285" )
         tk_screen.title("Read C.R.U.D")
-        r_lab_title = Label(text = "Users",font =("Sans-serif", 13))
-        back_btt = Button(tk_screen,
+        tk_screen.grid_rowconfigure(0, weight=1)
+        tk_screen.columnconfigure(0, weight=1)
+        frameM = tk.Frame(tk_screen)
+        frameM.grid(sticky='news')
+
+        r_lab_title = Label(frameM, text = "Users",font =("Sans-serif", 13))
+        back_btt = Button(frameM,
                  borderwidth = 1,
                  text ="Go back",
                  command = lambda:
                  [backTo(tk_screen ,"menu" )]
                  )
+        
         r_lab_title.grid(column = 1, row = 0 )
-        callNewread()
+        callNewread(frameM)
         back_btt.grid(column = 0, row = 0 )
+        canvas = tk.Canvas(frameM)
+        canvas.grid(row = 0, column=0, sticky="news")
+        cv_scroll = tk.Scrollbar(frameM, orient="vertical", command=canvas.yview)
+        cv_scroll.grid(row=0, column=1, sticky='ns')
+        canvas.config(scrollregion = canvas.bbox("all"))
         tk_screen.mainloop()
 
     elif screen == "update":
@@ -150,7 +161,7 @@ def tkinterBox(screen):
     
     elif screen == 'update+N':
         session_u = callUserinbase(changeSession(False))
-        tk_screen.geometry("260x130" )
+        tk_screen.geometry("260x130")
         tk_screen.title("Update Name")
         back_btt = Button(tk_screen,
                  borderwidth = 1,
@@ -226,30 +237,30 @@ def backTo(old_screen, new_screen):
     closeScreen(old_screen)
     tkinterBox(new_screen)
 
-def callNewread():
+def callNewread(frame):
     u_list = readBtt()
-    line_u = Label(text = "-------------")
+    line_u = Label(frame,text = "-------------")
     line_u.grid(column = 0, row = 1 )
-    line_u1 = Label(text = "----------------------------")
+    line_u1 = Label(frame, text = "----------------------------")
     line_u1.grid(column = 1, row = 1 )
     actual_row = 1
     for user in u_list:
          actual_row += 1
-         name_lab = Label(text = "Name: ",font =("Arial bold", 8))
+         name_lab = Label(frame, text = "Name: ",font =("Arial bold", 8))
          name_lab.grid(column = 0, row = actual_row )
-         name_lab_txt = Label(text = user.name ,font =("Sans-serif", 11))
+         name_lab_txt = Label(frame, text = user.name ,font =("Sans-serif", 11))
          name_lab_txt.place(anchor= "w")
          name_lab_txt.grid(column = 1, row = actual_row )
          actual_row += 1
-         username_lab = Label(text = "Username: ",font =("Arial bold", 8))
+         username_lab = Label(frame, text = "Username: ",font =("Arial bold", 8))
          username_lab.grid(column = 0, row = actual_row )
-         username_lab_txt = Label(text = user.username ,font =("Sans-serif", 11))
+         username_lab_txt = Label(frame, text = user.username ,font =("Sans-serif", 11))
          username_lab_txt.place(anchor= "w")
          username_lab_txt.grid(column = 1, row = actual_row )
          actual_row += 1
-         line_u = Label(text = "-------------")
+         line_u = Label(frame, text = "-------------")
          line_u.grid(column = 0, row = actual_row )
-         line_u1 = Label(text = "----------------------------")
+         line_u1 = Label(frame, text = "----------------------------")
          line_u1.grid(column = 1, row = actual_row )
     
 
