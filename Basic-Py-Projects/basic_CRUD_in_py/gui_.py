@@ -1,5 +1,5 @@
 #Gui tkinter 
-from tkinter import RIGHT, Y, Grid, messagebox, Tk, Label, Button, Text, DISABLED, ttk
+from tkinter import RIGHT, Y, Entry, Grid, messagebox, Tk, Label, Button, Text, DISABLED, ttk
 import tkinter as tk
 from RfromCrud import callUserinbase, getUid
 from btt_func import loginBtt, readBtt, regisBtt, updateElement
@@ -13,9 +13,10 @@ def tkinterBox(screen):
         tk_screen.title("Login C.R.U.D")
         lab_title = Label(text = "Logar-se",font =("Sans-serif", 13))
         lab = Label(text = "Username:",font =("Sans-serif", 10))
-        user_imput_lg = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        user_imput_lg = Text(tk_screen, height= 1, width= 19, bg= 'white')
         lab1 = Label(text = "Password:",font =("Sans-serif", 10))
-        user_imput_ps = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        user_imput_ps = Entry(tk_screen, width= 25, show="*", bg= 'white', highlightcolor= 'gray')
+        print(user_imput_ps)
         #btt_img_lg = PhotoImage(file = "imgs/login_btt.png")
         btt_lg = Button(tk_screen,
                  borderwidth = 3,
@@ -46,9 +47,9 @@ def tkinterBox(screen):
         r_lab1 = Label(text = "Username:",font =("Sans-serif", 10))
         r_user_imput_us = Text(tk_screen, height= 1, width= 20, bg= 'white')
         r_lab2 = Label(text = "Password:",font =("Sans-serif", 10))
-        r_user_imput_pass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_user_imput_pass =  Entry(tk_screen, width= 25, show="*", bg= 'white', highlightcolor= 'gray')
         r_lab3 = Label(text = "Confirm Password:",font =("Sans-serif", 10))
-        r_user_imput_cpass = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_user_imput_cpass =  Entry(tk_screen, width= 25, show="*", bg= 'white', highlightcolor= 'gray')
         r_btt_cd = Button(tk_screen,
                  borderwidth = 3,
                  text ="Register",
@@ -66,10 +67,12 @@ def tkinterBox(screen):
         callScreen(widgets_list_reg, tk_screen)
 
     elif screen == "menu":
+        session_u = callUserinbase(changeSession(False))
         tk_screen.geometry("260x285" )
         tk_screen.title("Menu C.R.U.D")
         line_m = Label(text = "-------------------------------------------")
         m_lab_title = Label(text = "Menu",font =("Sans-serif", 13))
+        m_lab_pres = Label(text = "Bem vindo(a), " + session_u.name ,font =("Sans-serif", 9))
         see_whoin_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Show Users",
@@ -91,15 +94,13 @@ def tkinterBox(screen):
                  borderwidth = 2,
                  text ="Exit",
                  command = lambda:
-                 [closeScreen(tk_screen), tkinterBox("login")])
-        widgets_list_reg = [m_lab_title, line_m, see_whoin_btt, config_btt, back_btt, line, exit_btt]
+                 [closeScreen(tk_screen)])
+        widgets_list_reg = [m_lab_title, m_lab_pres, line_m, see_whoin_btt, config_btt, back_btt, line, exit_btt]
         callScreen(widgets_list_reg, tk_screen)
     
     elif screen == "see_user":
         tk_screen.geometry("260x285" )
         tk_screen.title("Read C.R.U.D")
-        tk_screen.grid_rowconfigure(0, weight=1)
-        tk_screen.columnconfigure(0, weight=1)
         frameM = tk.Frame(tk_screen)
         frameM.grid(sticky='news')
 
@@ -110,15 +111,10 @@ def tkinterBox(screen):
                  command = lambda:
                  [backTo(tk_screen ,"menu" )]
                  )
-        
         r_lab_title.grid(column = 1, row = 0 )
         callNewread(frameM)
         back_btt.grid(column = 0, row = 0 )
-        canvas = tk.Canvas(frameM)
-        canvas.grid(row = 0, column=0, sticky="news")
-        cv_scroll = tk.Scrollbar(frameM, orient="vertical", command=canvas.yview)
-        cv_scroll.grid(row=0, column=1, sticky='ns')
-        canvas.config(scrollregion = canvas.bbox("all"))
+        
         tk_screen.mainloop()
 
     elif screen == "update":
