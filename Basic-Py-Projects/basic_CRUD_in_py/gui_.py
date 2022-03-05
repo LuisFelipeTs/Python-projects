@@ -16,7 +16,6 @@ def tkinterBox(screen):
         user_imput_lg = Text(tk_screen, height= 1, width= 19, bg= 'white')
         lab1 = Label(text = "Password:",font =("Sans-serif", 10))
         user_imput_ps = Entry(tk_screen, width= 25, show="*", bg= 'white', highlightcolor= 'gray')
-        print(user_imput_ps)
         #btt_img_lg = PhotoImage(file = "imgs/login_btt.png")
         btt_lg = Button(tk_screen,
                  borderwidth = 3,
@@ -68,27 +67,32 @@ def tkinterBox(screen):
 
     elif screen == "menu":
         session_u = callUserinbase(changeSession(False))
-        tk_screen.geometry("260x285" )
+        line= Label(text = "-----------------------------------", bg= actual_bg_color)
+        actual_bg_color = session_u.UX_
+        tk_screen.geometry("260x285")
         tk_screen.title("Menu C.R.U.D")
-        line_m = Label(text = "-------------------------------------------")
-        m_lab_title = Label(text = "Menu",font =("Sans-serif", 13))
-        m_lab_pres = Label(text = "Bem vindo(a), " + session_u.name ,font =("Sans-serif", 9))
+        line_m = Label(text = "-------------------------------------------", bg= actual_bg_color)
+        m_lab_title = Label(text = "Menu",font =("Sans-serif", 13),bg= actual_bg_color)
+        m_lab_pres = Label(text = "Bem vindo(a), " + session_u.name ,font =("Sans-serif", 9),bg= actual_bg_color)
         see_whoin_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Show Users",
+                 width= 16,
                  command = lambda:
                  [backTo(tk_screen, "see_user")]
                  )
         config_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Configurations",
+                 width= 16,
                  command = lambda:
                  [closeScreen(tk_screen), tkinterBox("update")])
         back_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Go back",
+                 width= 16,
                  command = lambda:
-                 [loginBtt(user_imput_lg, user_imput_ps), checkIflog(log_r, tk_screen)]
+                 [closeScreen(tk_screen), tkinterBox("login")]
                  )
         exit_btt = Button(tk_screen,
                  borderwidth = 2,
@@ -96,6 +100,7 @@ def tkinterBox(screen):
                  command = lambda:
                  [closeScreen(tk_screen)])
         widgets_list_reg = [m_lab_title, m_lab_pres, line_m, see_whoin_btt, config_btt, back_btt, line, exit_btt]
+        tk_screen.configure(bg= str(session_u.UX_))
         callScreen(widgets_list_reg, tk_screen)
     
     elif screen == "see_user":
@@ -114,7 +119,6 @@ def tkinterBox(screen):
         r_lab_title.grid(column = 1, row = 0 )
         callNewread(frameM)
         back_btt.grid(column = 0, row = 0 )
-        
         tk_screen.mainloop()
 
     elif screen == "update":
@@ -139,6 +143,7 @@ def tkinterBox(screen):
         ch_n_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Change Name",
+                 width= 16,
                  command = lambda:
                  [backTo(tk_screen ,"update+N" )]
                  )
@@ -148,11 +153,20 @@ def tkinterBox(screen):
         ch_p_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Change Pass",
+                 width= 16,
                  command = lambda:
                  [backTo(tk_screen ,"update+P" )]
                  )
         ch_p_btt.grid(column = 0 , row = 3)
-        pass_lab = Label(text = "color: " + session_u.name ,font =("Arial bold", 8))
+        ch_p_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Change Color",
+                 width= 16,
+                 command = lambda:
+                 [backTo(tk_screen ,"update+U" )]
+                 )
+        ch_p_btt.grid(column = 0 , row = 4)
+        pass_lab = Label(text = "color: " + session_u.UX_ ,font =("Arial bold", 8))
         pass_lab.grid(column = 1, row = 4 )
     
     elif screen == 'update+N':
