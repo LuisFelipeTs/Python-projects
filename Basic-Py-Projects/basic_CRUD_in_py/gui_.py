@@ -3,6 +3,7 @@ from tkinter import RIGHT, Y, Entry, Grid, messagebox, Tk, Label, Button, Text, 
 import tkinter as tk
 from RfromCrud import callUserinbase, getUid
 from btt_func import loginBtt, readBtt, regisBtt, updateElement
+from list_view_cl import ColorList
 
 def tkinterBox(screen):
     tk_screen = Tk()
@@ -11,7 +12,7 @@ def tkinterBox(screen):
     if screen == "login":
         tk_screen.geometry("240x255" )
         tk_screen.title("Login C.R.U.D")
-        lab_title = Label(text = "Logar-se",font =("Sans-serif", 13))
+        lab_title = Label(text = "CRUD Login",font =("Sans-serif", 13))
         lab = Label(text = "Username:",font =("Sans-serif", 10))
         user_imput_lg = Text(tk_screen, height= 1, width= 19, bg= 'white')
         lab1 = Label(text = "Password:",font =("Sans-serif", 10))
@@ -20,12 +21,13 @@ def tkinterBox(screen):
         btt_lg = Button(tk_screen,
                  borderwidth = 3,
                  text ="Login!",
+                 width=10,
                  command = lambda:
                  [loginBtt(user_imput_lg, user_imput_ps, log_r), checkIflog(log_r, tk_screen, "menu", user_imput_lg)]
                  )
         btt_rg = Button(tk_screen,
                  borderwidth = 0,
-                 text ="Não possui conta? Registre-se",
+                 text ="Don't have an account? Register",
                  command = lambda:
                  [closeScreen(tk_screen), tkinterBox("regis")], )
         btt_ex = Button(tk_screen,
@@ -39,12 +41,12 @@ def tkinterBox(screen):
 
     elif screen == "regis":
         tk_screen.geometry("260x305" )
-        tk_screen.title("Registre-se C.R.U.D")
+        tk_screen.title("Register C.R.U.D")
         r_lab_title = Label(text = "Register",font =("Sans-serif", 13))
         r_lab = Label(text = "Name:",font =("Sans-serif", 10))
-        r_user_imput_nm = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_user_imput_nm = Text(tk_screen, height= 1, width= 19, bg= 'white')
         r_lab1 = Label(text = "Username:",font =("Sans-serif", 10))
-        r_user_imput_us = Text(tk_screen, height= 1, width= 20, bg= 'white')
+        r_user_imput_us = Text(tk_screen, height= 1, width= 19, bg= 'white')
         r_lab2 = Label(text = "Password:",font =("Sans-serif", 10))
         r_user_imput_pass =  Entry(tk_screen, width= 25, show="*", bg= 'white', highlightcolor= 'gray')
         r_lab3 = Label(text = "Confirm Password:",font =("Sans-serif", 10))
@@ -67,13 +69,14 @@ def tkinterBox(screen):
 
     elif screen == "menu":
         session_u = callUserinbase(changeSession(False))
-        line= Label(text = "-----------------------------------", bg= actual_bg_color)
         actual_bg_color = session_u.UX_
+        line = Label(text = "-----------------------------------", bg = actual_bg_color)
+
         tk_screen.geometry("260x285")
         tk_screen.title("Menu C.R.U.D")
         line_m = Label(text = "-------------------------------------------", bg= actual_bg_color)
         m_lab_title = Label(text = "Menu",font =("Sans-serif", 13),bg= actual_bg_color)
-        m_lab_pres = Label(text = "Bem vindo(a), " + session_u.name ,font =("Sans-serif", 9),bg= actual_bg_color)
+        m_lab_pres = Label(text = "Welcome " + session_u.name ,font =("Sans-serif", 9),bg= actual_bg_color)
         see_whoin_btt = Button(tk_screen,
                  borderwidth = 1,
                  text ="Show Users",
@@ -237,6 +240,21 @@ def tkinterBox(screen):
                  )
         up_btt.grid(column = 1, row= 4)
         log_u = Text(tk_screen)
+
+    elif screen == 'update+U':
+        tk_screen.geometry("260x230")
+        tk_screen.title("Update Color")
+        session_u = callUserinbase(changeSession(False))
+        back_btt = Button(tk_screen,
+                 borderwidth = 1,
+                 text ="Go back",
+                 command = lambda:
+                 [backTo(tk_screen ,"update")]
+                 )
+        back_btt.grid(column = 0, row = 0)
+        list_viz = ColorList(tk_screen, session_u)
+
+
 
 def callScreen(widgets_s, tk):
     for widget in widgets_s:

@@ -1,7 +1,6 @@
+from tkinter import messagebox
 import User 
 import pandas as pd
-
-ux_guide = pd.read_excel("data/UX_guide.xlsx")
 
 def updateName(user, new_name, password):
     user_data = call_u_database()
@@ -26,10 +25,10 @@ def updatePassword(user, password, new_password, new_password_cf):
         else: return False, "The password is equal to the old one"
     else: return False, "The actual password is incorrect"
 
-def updateUx(user, new_ux, add_del):
+def updateUx(user, new_ux):
     user_data = call_u_database()
-    old_ux = user.UX_
-    if add_del:
+    ux_guide = pd.read_excel("data/UX_guide.xlsx")
+    '''if add_del:
         if new_ux not in user.UX_:
             if new_ux in list(ux_guide["ux_id"]):
                 old_ux += new_ux
@@ -37,12 +36,18 @@ def updateUx(user, new_ux, add_del):
                 return True, ""
             else: return False, "ne"
         else: return False, "ai"
-    else:
-       if new_ux in user.UX_:
-           old_ux -= new_ux
-           user_data.loc[user_data['user_id'] ==  user.user_id, 'UX'] = old_ux
-           return True, ""
-       else: return False, "ao"
+    else:'''
+    
+    user_data.loc[user_data['user_id'] ==  user.user_id, 'UX'] = str(new_ux)
+    alert("Color Update", "Color updated!")
+    saveU(user_data)
+
+    #alert("Color Update", "Update error!", "error")
+    
+        
+def alert(title, message, kind='info'):
+    show_method = getattr(messagebox, 'show{}'.format(kind))
+    show_method(title, message)
 
 def saveU(user_data):
     with pd.ExcelWriter("data/user_data.xlsx") as writer:

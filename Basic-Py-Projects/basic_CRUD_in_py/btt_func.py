@@ -13,7 +13,7 @@ def checkIfconnectedtobase():
 
 def loginBtt(username_imp, password_imp, out_log):
     username = str(username_imp.get("1.0", "end-1c"))
-    password = str(password_imp.get("1.0", "end-1c"))
+    password = password_imp.get()
     lg_validation, lg_response = getLogin(username, password)
     if lg_validation:
         changeLog(out_log, "Loged!")
@@ -25,8 +25,8 @@ def loginBtt(username_imp, password_imp, out_log):
 def regisBtt(name, username, password, confirm_password, out_log):
     name = str(name.get("1.0", "end-1c"))
     username = str(username.get("1.0", "end-1c"))
-    password = str(password.get("1.0", "end-1c"))
-    confirm_password = str(confirm_password.get("1.0", "end-1c"))
+    password = password.get()
+    confirm_password = confirm_password.get()
     validate = False
     message_log = ""
     if name == "" or (len(name) < 3): message_log = "The name must have at least 3 letters"
@@ -34,7 +34,7 @@ def regisBtt(name, username, password, confirm_password, out_log):
     elif password == "" or (len(name) < 3): message_log = "The password must have at least 4 letters"
     elif confirm_password != password: message_log = "The Confirm password must be equal to the password"        
     else:
-        validate, message_log = registerUser(User(getNewid(), name, username, password, ""))
+        validate, message_log = registerUser(User(getNewid(), name, username, password, "white"))
     if message_log == "Loged!": 
         print("...")
         changeLog(out_log, "Loged!")

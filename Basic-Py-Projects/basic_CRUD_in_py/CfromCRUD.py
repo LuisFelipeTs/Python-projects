@@ -1,12 +1,9 @@
-
 import numpy as np
 import pandas as pd
 import RfromCrud
 
-user_data = pd.read_excel("data/user_data.xlsx")
-ux_guide = pd.read_excel("data/UX_guide.xlsx")
-
 def registerUser(user):
+    user_data = pd.read_excel("data/user_data.xlsx")
     if RfromCrud.checkIfesxists(user.username): 
         return False, "The Username is already in use"
     new_u = pd.DataFrame([[
@@ -23,6 +20,7 @@ def registerUser(user):
 
     with pd.ExcelWriter("data/user_data.xlsx") as writer:
         new_user_base.to_excel(writer, index= False)
+
     return True, "Loged!"
     
     
