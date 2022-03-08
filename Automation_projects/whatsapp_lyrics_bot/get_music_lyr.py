@@ -20,11 +20,3 @@ def getMusicLyr(music_name, music_singer):
     if song == "": return "NSF" #No song was found
     else: 
         return(music_name + " - " + music_singer + "\n" + "\n" + song + "\n" + "\n" + "Para tocar no Cifra club : " + b_link) 
-
-
-#def getYoutLink(music_name, music_singer):
-
-print(getMusicLyr("pet sematary", "ramones"))
- 
-
- 
