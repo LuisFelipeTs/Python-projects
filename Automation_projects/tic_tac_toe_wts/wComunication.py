@@ -108,4 +108,4 @@ class WhatsLyrBot:
                         self.onOffBot()
                 else:  self.wrMenss("Por favor insira *S* para sim e *N* para não")
 
-wt = WhatsLyrBot("Bilio", "Luís", True)
+wt = WhatsLyrBot("Player_1", "Player_2", True)
