@@ -1,11 +1,8 @@
 import speech_recognition as sr
 
-
- 
 class GoliasEar():
-
     def __init__(self):
-        self.a = 1
+        self.status = "ON"
         
     def ouvir_microfone(self):
         microfone = sr.Recognizer()
