@@ -14,4 +14,5 @@
 & Simple Wikipedia Alf Request <h5>(https://github.com/LuisFelipeTs/Python-projects/blob/main/Basic-Py-Projects/Wiki-Alf-Request/wiki_request.py)</h5> <br />
 & Basic py CRUD w Tkinter <h5>(https://github.com/LuisFelipeTs/Python-projects/tree/main/Basic-Py-Projects/basic_CRUD_in_py)</h5> <br />
 & Basic voice aplication <h5>(https://github.com/LuisFelipeTs/Python-projects/tree/main/Basic-Py-Projects/basic_voice_py)</h5> <br />
+& Basic Listen voice aplication <h5>(https://github.com/LuisFelipeTs/Python-projects/tree/main/Basic-Py-Projects/basic_ear_py)</h5> <br />
 
