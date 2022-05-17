@@ -1,11 +1,15 @@
-from zipapp import ZipAppError
 from selenium import webdriver
 import time
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.service import Service
 from bs4 import BeautifulSoup
 
-adiciona tipo fazer um reconhecimento facial se n for a pessoa manda a foto pelo Zap 
+#adiciona tipo fazer um reconhecimento facial se n for a pessoa manda a foto pelo Zap 
+
+import logging
+logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
+    datefmt='%Y-%m-%d %H:%M:%S',)
+logging.info("Estabelecendo conexão com o Whatsapp...")
 
 class WhatsComunic:
     def __init__(self, actual_target, status = False):
@@ -36,7 +40,7 @@ class WhatsComunic:
                 old_mens = mens
                 if " - " in mens :   
                     song_n, singer = mens.split(" - ")
-                    text_to_res = getMusicLyr(song_n, singer)
+                    text_to_res = ""#getMusicLyr(song_n, singer)
                     print(text_to_res)
                     if text_to_res == "NSF": self.wrMenss("Tal autor/musica não existe ou está escrito incorretamente")
                     else: self.wrMenss(text_to_res)
@@ -46,8 +50,14 @@ class WhatsComunic:
 
     def getToZapp(self):
         self.driver.get(self.whatsapp_link)
-        time.sleep(15) 
-        find_target = self.driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
+        time.sleep(5)
+        while True:
+            try:
+                find_target = self.driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
+                break
+            except:
+                logging.info("Tentando estabelecer conexão...")
+            time.sleep(4)
         find_target.click()
         time.sleep(2)
         find_target.send_keys(self.actual_target + Keys.ENTER)
@@ -76,4 +86,4 @@ class WhatsComunic:
         return last_messages
 
 
-wt = WhatsLyrBot("door-lock-bot", True)
+wt = WhatsComunic("Door lock bot", True)
