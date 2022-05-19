@@ -25,7 +25,7 @@ class WhatsComunic:
         else: self.status = True
 
     def startWork(self):
-        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança," + " tem alguem que não conhecemos tentando entrar" + 'Se você o permite entrar digite OK, se não digite NAO'
+        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, qualquer atualização na segurança de sua porta."
         self.getToZapp()
         self.wrMenss(self.intro_text)
         old_mens = ""
@@ -40,7 +40,7 @@ class WhatsComunic:
                 old_mens = mens
                 if " - " in mens :   
                     song_n, singer = mens.split(" - ")
-                    text_to_res = ""#getMusicLyr(song_n, singer)
+                    text_to_res = ""    #getMusicLyr(song_n, singer)
                     print(text_to_res)
                     if text_to_res == "NSF": self.wrMenss("Tal autor/musica não existe ou está escrito incorretamente")
                     else: self.wrMenss(text_to_res)
