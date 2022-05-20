@@ -1,22 +1,29 @@
+from tkinter import image_names
 import cv2
 import time
-
+import datetime  
 import logging
 logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
     datefmt='%Y-%m-%d %H:%M:%S',)
 
-
-
-def getPic(img_name):
-    cam = cv2.VideoCapture(0)
-    logging.info("Uma foto foi registrada pelo equipamento")
-    #cv2.namedWindow("test")
+def getPic():
+    try:
+        cam = cv2.VideoCapture(0) 
+        now = datetime.datetime.now()
+        actual_time = "{}-{}-{}_{}-{}-{}".format(now.year, now.month, now.day, now.hour, now.minute, now.second)
+        img_name = "img\{}.png".format(actual_time)   
+        ret, frame = cam.read()
         
-    ret, frame = cam.read()
-    time.sleep(1)
-    cv2.imwrite(img_name, img = frame)
-    cam.release()
+        cv2.imwrite(img_name, img = frame)
+        time.sleep(1)
+        cam.release()
+        cv2.destroyAllWindows()
+        logging.info("Uma foto foi registrada pelo equipamento")
+        name = "NM"
+        permition = True
+        return(img_name, name, permition)
+    except:
+        logging.info("Um erro ocorreu na câmera")
+        return("None", "", "")
 
-    cv2.destroyAllWindows()
-
-getPic("img/first_img_test.png")
+getPic()

@@ -1,6 +1,5 @@
-
 from tkinter import LEFT, X, Y, YES, Frame, Label, Button, Text, Tk, messagebox
-
+import cam_res
 import logging
 logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
     datefmt='%Y-%m-%d %H:%M:%S',)
@@ -64,11 +63,17 @@ class doorLock():
             self.txt_visor = self.txt_visor[:-1]
 
     def checkPassword(self):
+        img_path, who, permition = cam_res.getPic()
         if self.actual_pass == self.security_pass:
-            self.visor_color = 'green'
-            alert("Acesso Liberado!", "A sua entrada foi liberada com sucesso" , "info")
-            logging.warning("Door's was opened by {}.".format("Owner"))
-            print("ok")
+            if permition == True:
+                self.visor_color = 'green'
+                alert("Acesso Liberado!", "A sua entrada foi liberada com sucesso" , "info")
+                logging.warning("Door's was opened by {}.".format("Owner"))
+            else:
+                self.visor_color = 'yellow'
+                alert("Acesso Liberado!", "A sua entrada foi liberada com sucesso" , "info")
+                logging.warning("Door's was opened by {}.".format("Owner"))
+
         else:
             self.visor_color = 'red'
             alert("Acesso Bloqueado!", "A senha está incorreta!", "warning")

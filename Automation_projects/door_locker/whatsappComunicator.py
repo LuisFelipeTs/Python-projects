@@ -1,5 +1,6 @@
 from selenium import webdriver
 import time
+from door_lock import doorLock
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.service import Service
 from bs4 import BeautifulSoup
@@ -17,6 +18,7 @@ class WhatsComunic:
         self.driver = webdriver.Edge(service = srv)
         self.actual_target = actual_target
         self.status = status
+        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, trarei qualquer atualização no status de sua porta."
         self.whatsapp_link = "https://web.whatsapp.com/"
         self.startWork()
         
@@ -25,7 +27,6 @@ class WhatsComunic:
         else: self.status = True
 
     def startWork(self):
-        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, qualquer atualização na segurança de sua porta."
         self.getToZapp()
         self.wrMenss(self.intro_text)
         old_mens = ""
@@ -35,10 +36,10 @@ class WhatsComunic:
                 self.onOffBot()
                 self.wrMenss("Tchau :D")
                 break
-            time.sleep(2.5)
+            time.sleep(3.5)
             if (old_mens != mens) & (mens != "."):
                 old_mens = mens
-                if " - " in mens :   
+                if mens in 'SN' : 
                     song_n, singer = mens.split(" - ")
                     text_to_res = ""    #getMusicLyr(song_n, singer)
                     print(text_to_res)
@@ -54,6 +55,8 @@ class WhatsComunic:
         while True:
             try:
                 find_target = self.driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
+                self.door_lock = doorLock()
+                logging.info("Conectado...")
                 break
             except:
                 logging.info("Tentando estabelecer conexão...")
