@@ -1,6 +1,6 @@
 from selenium import webdriver
 import time
-from door_lock import doorLock
+from door_lock import  alert, doorLock #, doorLock
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.service import Service
 from bs4 import BeautifulSoup
@@ -13,12 +13,13 @@ logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format
 logging.info("Estabelecendo conexão com o Whatsapp...")
 
 class WhatsComunic:
-    def __init__(self, actual_target, status = False):
+    def __init__(self, status = False):
+        alert("Info", "Para comerçarmos conecte-se ao whatsapp com o QR_CODE", "info")
         srv = Service(r'./msedgedriver.exe')
         self.driver = webdriver.Edge(service = srv)
-        self.actual_target = actual_target
+        self.wt_bot = "Door lock bot"
         self.status = status
-        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, trarei qualquer atualização no status de sua porta."
+        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, trarei qualquer atualização no status de sua porta principal."
         self.whatsapp_link = "https://web.whatsapp.com/"
         self.startWork()
         
@@ -32,22 +33,31 @@ class WhatsComunic:
         old_mens = ""
         while (self.status):
             mens = self.rdMenss()
-            if mens in ["OK","Ok","ok","oK"]:
-                self.onOffBot()
-                self.wrMenss("Tchau :D")
-                break
+            #if mens in ["OK","Ok","ok","oK"]:
+            #    self.onOffBot()
+            #    self.wrMenss("Tchau :D")
+            #    break
             time.sleep(3.5)
             if (old_mens != mens) & (mens != "."):
                 old_mens = mens
                 if mens in 'SN' : 
-                    song_n, singer = mens.split(" - ")
-                    text_to_res = ""    #getMusicLyr(song_n, singer)
+                    text_to_res = "" 
                     print(text_to_res)
                     if text_to_res == "NSF": self.wrMenss("Tal autor/musica não existe ou está escrito incorretamente")
                     else: self.wrMenss(text_to_res)
-                        
                 else: self.wrMenss('Lembrar de separar o cantor da música com " - "')
 
+
+    def waitForconf(self, last_mes):
+        mens = self.rdMenss()
+        if (last_mes != mens):
+                if mens in 'SN' : 
+                    text_to_res = "" 
+                    print(text_to_res)
+                    if text_to_res == "NSF": self.wrMenss("")
+                    else: self.wrMenss(text_to_res)
+                else: 
+                    self.wrMenss('Por Favor responda apenas com "S" para Sim e "N" para não')
 
     def getToZapp(self):
         self.driver.get(self.whatsapp_link)
@@ -55,7 +65,7 @@ class WhatsComunic:
         while True:
             try:
                 find_target = self.driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
-                self.door_lock = doorLock()
+                #self.door_lock = doorLock()
                 logging.info("Conectado...")
                 break
             except:
@@ -65,6 +75,10 @@ class WhatsComunic:
         time.sleep(2)
         find_target.send_keys(self.actual_target + Keys.ENTER)
 
+    def sendImg():
+        imgs_path = 'C:\Users\lfcct\Desktop\progams\PSIV\lf_awsRek_project\img'
+        pass
+    
     def wrMenss(self, msg): 
         txt_entry = self.driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
         time.sleep(0.5)
@@ -74,10 +88,9 @@ class WhatsComunic:
         txt_entry.send_keys(msg + Keys.ENTER)
 
     def rdMenss(self):
-        #https://highontechs.com/chatbot/read-whatsapp-messages-using-python-selenium/ 
         messages = list()
         soup = BeautifulSoup(self.driver.page_source, "html.parser")
-        for i in soup.find_all("div", class_="message-in"):
+        for i in soup.find_all("div", class_="message-out"): #alternar sobre quem manda as msgs
             message = i.find("span", class_="selectable-text")
             if message:
                 message2 = message.find("span")
