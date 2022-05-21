@@ -1,5 +1,6 @@
 from tkinter import image_names
 import cv2
+from aws_connection import *
 import time
 import datetime  
 import logging
@@ -18,12 +19,15 @@ def getPic():
         time.sleep(1)
         cam.release()
         cv2.destroyAllWindows()
+        if getReckres(actual_time):
+            return(True)
+
         logging.info("Uma foto foi registrada pelo equipamento")
         name = "NM"
         permition = True
         return(img_name, name, permition)
     except:
         logging.info("Um erro ocorreu na câmera")
-        return("None", "", "")
+        return(False)
 
 getPic()
