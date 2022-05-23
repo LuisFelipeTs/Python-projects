@@ -5,8 +5,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.edge.service import Service
 from bs4 import BeautifulSoup
 
-#adiciona tipo fazer um reconhecimento facial se n for a pessoa manda a foto pelo Zap 
-
 import logging
 logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
     datefmt='%Y-%m-%d %H:%M:%S')
@@ -17,15 +15,11 @@ class WhatsComunic:
         alert("Info", "Para comerçarmos conecte-se ao whatsapp com o QR_CODE que surgirá na tela", "info")
         srv = Service(r'./msedgedriver.exe')
         self.driver = webdriver.Edge(service = srv)
-        self.wt_bot = "Door lock bot"
+        self.wt_bot = "Door lock"
         self.status = True
-        self.intro_text = "Olá , eu sou Rek" + '\n' + "Seu BOT de segurança, trarei qualquer atualização no status de sua porta principal."
+        self.intro_text = "Olá , eu sou o Door Lock bot" + '\n' + "Seu BOT de segurança, trarei qualquer atualização no status de sua porta."
         self.whatsapp_link = "https://web.whatsapp.com/"
         self.startWork()
-    
-    def __str__(self):
-        pass
-    #    return self.status
 
     def onOffBot(self):
         if self.status : self.status = False
@@ -53,29 +47,32 @@ class WhatsComunic:
         time.sleep(5)
         while True:
             try:
-                find_target = self.driver.find_element_by_xpath('//*[@id="side"]/div[1]/div/label/div/div[2]')
+                find_target = self.driver.find_element_by_xpath('/html/body/div[1]/div/div/div[3]/div/div[1]/div/div/div[2]/div/div[2]')
                 logging.info("Conectado...")
                 print(123)
                 break 
             except:
                 logging.info("Tentando estabelecer conexão...")
-            time.sleep(2)
+            time.sleep(3)
+        time.sleep(3)
         find_target.click()
-        time.sleep(2)
-        find_target.send_keys(self.wt_bot + Keys.ENTER)
+        time.sleep(3)
+        find_target.send_keys(self.wt_bot)
+        time.sleep(1)
+        find_target.send_keys(Keys.ENTER)
+        
 
     def wrMenss(self, msg): 
         try:
             txt_entry = self.driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
         except:
-            alert("Reconnect-se","Por favor reconnect-se","alert")
+            alert("Reconnect-se","Por favor reconnect-se","error")
             self.getToZapp()
             txt_entry = self.driver.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[1]/div/div[2]')
 
         time.sleep(0.5)
         txt_entry.click()
         time.sleep(1)
-        #self.song_name + " - " + self.song_artist + "\n" + "\n"  
         txt_entry.send_keys(msg + Keys.ENTER)
 
     def rdMenss(self):
@@ -96,3 +93,4 @@ class WhatsComunic:
             alert("Reconnect-se","Por favor reconnect-se","alert")
             self.getToZapp()
             return self.rdMenss()
+

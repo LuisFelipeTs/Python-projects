@@ -1,13 +1,11 @@
-from ast import Try
-import imp
-import time
-from tkinter import DISABLED, END, LEFT, X, Y, YES, Entry, Frame, Label, Button, Text, Tk, messagebox
-from urllib import response
-#import cam_res
+import datetime
+import random
+from tkinter import END, LEFT, X, Y, YES, Frame, Label, Button, Text, Tk
+import cam_res
 from whatsappComunicator import WhatsComunic
 import logging
 from alert import alert
-#import aws_connection
+import aws_connection
 logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
     datefmt='%Y-%m-%d %H:%M:%S')
 logging.info("Door's Lock simulator is ready to Start...")
@@ -43,7 +41,7 @@ class doorLock():
                                     command = lambda:[self.removeLastVisor()])
                 else:
                     btt_op = Button (self.btt_frame, text=char, bg = 'white',
-                                    command = lambda:[self.insertVisor(char)])
+                                    command = lambda s = self, y = char: s.insertVisor(y))
 
                 btt_op.pack (side=LEFT, expand=YES, fill = X)
             self.btt_frame.pack (expand=YES, fill = X)
@@ -66,35 +64,41 @@ class doorLock():
             
 
     def checkPassword(self):
-        if self.actual_pass == self.security_pass:
-            #response1, response2 = cam_res.getPic(True)
-            response2 = True 
+        print(self.actual_pass)
+        if str(self.actual_pass) == self.security_pass:
+            response1, response2 = cam_res.getPic(True)
             if response2 == True:
-                self.visor_color = 'green'
-                alert("Acesso Liberado!", "Bem vindo atual vendedor" , "info")
+                alert("Acesso Liberado!", "Bem vindo atual residente!" , "info")
                 self.wtsapp_connect.wrMenss("Bem Vindo! Porta aberta.")
-                #aws_connection.sendImgS3(response1 , "Resident__")
+                aws_connection.sendImgS3(response1 , "Resident")
                 logging.warning("Door's was opened by {}.".format("Owner"))
             else:
-                self.visor_color = 'yellow'
                 alert("Acesso Postergado!", "Não o reconhecemos por favor aguarde a liberação pelo dono" , "info")
                 quest_req = self.wtsapp_connect.getResponse("Alguem que não reconhecemos com a senha está tentando acessar a porta, você deseja abrir a porta?\nResponda S - para Sim e N - para não")
                 if quest_req:
+                    self.wtsapp_connect.wrMenss("O visitante foi liberado")
                     logging.warning("Door's was opened by {}.".format("Visitant"))
-                    #aws_connection.sendImgS3(response1 , "Visitant")
+                    alert("Welcome!", "Bem Vindo(a)!", "info")
+                    self.try_pass = 0
+                    aws_connection.sendImgS3(response1 , "Visitor")
                 else:
-                    logging.warning("Door's was protected from suspect {}.".format("Visitant"))
-                    #aws_connection.sendImgS3(response1 , "Suspect")
+                    logging.warning("Door's was protected from suspect ")
+                    now = datetime.datetime.now()
+                    mixed_time = "{}{}{}{}{}".format(int(now.year/(random.randint(30, 50))), now.hour, int(now.day/2), now.hour, now.minute)
+                    self.security_pass = mixed_time
+                    self.wtsapp_connect.wrMenss("Sua nova senha é: {}".format(self.security_pass))
+                    alert("Bloked!", "Acesso negado!", "error")
+                    self.try_pass = 0
+                    aws_connection.sendImgS3(response1 , "Suspect")
         else:
             alert("Acesso Bloqueado!", "A senha está incorreta!", "error")
             self.actual_pass = ""
             self.visor.delete('1.0' , END)
             self.try_pass += 1
             if self.try_pass == 4:
-                permition = True
-                #name_sus, suspect = cam_res.getPic(False)
-                self.wtsapp_connect.wrMenss("Cuidado, alguêm está tentando acessar a porta")
-                #aws_connection.sendImgS3(name_sus, "Suspect")
+                name_sus, suspect = cam_res.getPic(False)
+                self.wtsapp_connect.wrMenss("Cuidado, alguem está tentando acessar a porta")
+                aws_connection.sendImgS3(name_sus, "Suspect")
                 logging.warning("Someone is trying to acess your front door")
                 self.try_pass = 0
 
