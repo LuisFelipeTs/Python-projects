@@ -3,9 +3,9 @@ import logging
 logging.basicConfig(filename='logs\general_log.log', level=logging.DEBUG, format='%(asctime)s.%(msecs)03d %(levelname)s ====: %(message)s =;',
     datefmt='%Y-%m-%d %H:%M:%S')
 
-ACCESS_KEY = 'ASIAVLMAXETSNQQY6PHA'
-SECRET_KEY ='UPJC1Nsbz56yoMSfAUEWIzi5doNb+gMDxLcN+Okl'
-SESSION_TOKEN='FwoGZXIvYXdzEHgaDDVok6s6cd3yZntE8CLTAQKeSmuecAVLzKnJUaFUBqQu45CqTTB3ZdmkA/ptPLiDz2j9Rv7xkchDUCZWCHWy3iDTf/6+hOX/2d3RS4XxRWsKffR9+EzhTzhMtTbm6WWv0uRUYklyqbCfTnkVpjx/XdY1L2uICo4HudwdZ1vTHhquKAUQw+QGuzaoLXLOPEXx6LRnHuJqlGka79Zab2q/wyLTJzYGzbpOlm9vU3/JArg02bXZq+vbs8+cSFtdUp4R0I14Y0ecrG7UO+Ltylme+Ck5gPGQcoFsM/K6jBPcpYEUZWgo3vyqlAYyLYkjNRDCuxGNBFE/AXG1o3xQVu6BkwxiUlY5T9jmz3PBmnmv6R/lFvH25pHToQ=='
+ACCESS_KEY = ''
+SECRET_KEY =''
+SESSION_TOKEN=''
 
 def getReckres(img_path):
      rek_aws = boto3.client('rekognition',
