@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns    
 import streamlit as st
 import altair as alt
+import os
 
-df = pd.read_csv('sales_data.csv')
+csv_path = os.path.join(os.path.dirname(__file__), 'sales_data.csv')
+df = pd.read_csv(csv_path)
+
 
 df['Date_Sold'] = pd.to_datetime(df['Date_Sold'])  
 df['Month_Year'] = df['Date_Sold'].dt.month
