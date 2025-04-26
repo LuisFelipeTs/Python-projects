@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 import altair as alt
 
-df = pd.read_csv('data/sales_data.csv')
+df = pd.read_csv('sales_data.csv')
 
 df['Date_Sold'] = pd.to_datetime(df['Date_Sold'])  
 df['Month_Year'] = df['Date_Sold'].dt.month
